@@ -1,21 +1,32 @@
 <template name="betsList">
-  <h2>{{currentUser.username}}'s bets</h2>
-  <h1>Open</h1><br>
-  <ul>
-    {{#each open_bets}}
-      <li>{{> betItem}}</li>
-    {{/each}}
-  </ul>
-  <h1>Pending</h1><br>
-  <ul>
-    {{#each pending_bets}}
-      <li>{{> betItem}}</li>
-    {{/each}}
-  </ul>
-  <h1>Completed</h1><br>
-  <ul>
-    {{#each completed_bets}}
-      <li>{{> betItem}}</li>
-    {{/each}}
-  </ul>
+  <h2>{{currentUser.username}}'s bets</h2><br>
+  <div class="button-container">
+    <button type="open" class="open-button">Open</button>
+    <button type="button" class="pending-button">In Progress</button>
+    <button type="button" class="completed-button">Completed</button>
+  </div><br>
+  <div class="open-bets">
+    <h1>Open</h1><br>
+    <ul>
+      {{#each open_bets}}
+        <li>{{> betItem}}</li><br>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="pending-bets">
+    <h1>In Progress</h1><br>
+    <ul>
+      {{#each pending_bets}}
+        <li>{{> betItem}}</li><br>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="completed-bets">
+    <h1>Completed</h1><br>
+    <ul>
+      {{#each completed_bets}}
+        <li>{{> betItem}}</li><br>
+      {{/each}}
+    </ul>
+  </div>
 </template>
