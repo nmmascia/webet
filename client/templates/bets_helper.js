@@ -1,7 +1,31 @@
 Template.betsList.helpers({
-  open_bets: Bets.find({status: "open"}),
-  pending_bets: Bets.find({status: "pending"}),
-  completed_bets: Bets.find({status: "completed"})
+  open_bets: function(user) {
+    return Bets.find({
+    $and : [
+      {status: "open"},
+      {$or: [{challenger: user.username},
+        {defender: user.username}]
+      }
+    ]
+  })},
+  pending_bets: function(user) {
+    return Bets.find({
+    $and : [
+      {status: "pending"},
+      {$or: [{challenger: user.username},
+        {defender: user.username}]
+      }
+    ]
+  })},
+  completed_bets: function(user) {
+    return Bets.find({
+    $and : [
+      {status: "completed"},
+      {$or: [{challenger: user.username},
+        {defender: user.username}]
+      }
+    ]
+  })},
 });
 
 Template.betsList.events({

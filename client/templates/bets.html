@@ -8,7 +8,7 @@
   <div class="open-bets">
     <h2>Open</h2><br>
     <ul>
-      {{#each open_bets}}
+      {{#each open_bets currentUser}}
         <li>{{> betItem}}</li><br>
       {{/each}}
     </ul>
@@ -16,7 +16,7 @@
   <div class="pending-bets">
     <h2>In Progress</h2><br>
     <ul>
-      {{#each pending_bets}}
+      {{#each pending_bets currentUser}}
         <li>{{> betItem}}</li><br>
       {{/each}}
     </ul>
@@ -24,7 +24,7 @@
   <div class="completed-bets">
     <h2>Completed</h2><br>
     <ul>
-      {{#each completed_bets}}
+      {{#each completed_bets currentUser}}
         <li>{{> betItem}}</li><br>
       {{/each}}
     </ul>
