@@ -9,8 +9,7 @@ Template.createBetForm.events({
     var defender = Meteor.users.findOne({ username: d_username })
 
     Bets.insert({
-      challenger: user.username,
-      defender: defender.username,
+      bettors: [user.username, defender.username],
       status: status,
       title: title,
       wager: wager
