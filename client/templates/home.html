@@ -1,3 +1,7 @@
 <template name="home">
-  <p>Code works!</p>
+  {{#unless currentUser }}
+    <p>Show login</p>
+  {{else}}
+      {{> dashboard}}
+  {{/unless}}
 </template>
