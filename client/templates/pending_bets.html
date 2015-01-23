@@ -1,5 +1,5 @@
 <template name="pendingBetsList">
-  <h2>{{currentUser}}'s bets in progress</h2>
+  <h2>{{currentUser.username}}'s bets in progress</h2>
   <ul>
     {{#each bets}}
       <li>{{> betItem}}</li>
