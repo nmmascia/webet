@@ -1,7 +1,20 @@
 <template name="betsList">
-  <h2>{{currentUser.username}}'s bets in progress</h2>
+  <h2>{{currentUser.username}}'s bets</h2>
+  <h1>Open</h1><br>
+  <ul>
+    {{#each open_bets}}
+      <li>{{> betItem}}</li>
+    {{/each}}
+  </ul>
+  <h1>Pending</h1><br>
   <ul>
     {{#each pending_bets}}
+      <li>{{> betItem}}</li>
+    {{/each}}
+  </ul>
+  <h1>Completed</h1><br>
+  <ul>
+    {{#each completed_bets}}
       <li>{{> betItem}}</li>
     {{/each}}
   </ul>
