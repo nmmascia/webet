@@ -24,4 +24,4 @@ Template.betsList.events({
     Session.set( "user", Meteor.user().username );
     Session.set( "status", "completed" );
   }
-})
+});
