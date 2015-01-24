@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "foundation": {}
+    },
+    "packages": {
+      "foundation": {
+        "git": "https://github.com/ewall/meteor-foundation.git",
+        "tag": "v5.4.0",
+        "commit": "19b30241d4dfc8899163c6c15f79ab79bf11f959"
+      }
+    }
+  }
+}
