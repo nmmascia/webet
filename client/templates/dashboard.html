@@ -3,6 +3,7 @@
     <p>You have <span class="bet-notification">{{ notificationsCount }}</span> new bets!</p>
   </div>
   <div class="user-tag">
-    <h1>{{ currentUser.username }}</h1>
+    <h1 class="text-center">{{ currentUser.username }}</h1>
+    {{> betsList}}
   </div>
 </template>
