@@ -6,6 +6,14 @@ Template.betItem.helpers({
     else {
       return false
     }
+  },
+  pendingStatus: function() {
+    if (this.status === "pending"){
+      return true
+    }
+    else {
+      return false
+    }
   }
 })
 
