@@ -21,6 +21,12 @@ body {
   color: #FFF;
 }
 
+.button.pink{
+  background-color: #FF0061;
+  border-color: #FF0061;
+  color: #fff;
+}
+
 .login-link {
   color: #4EB3FF;
 }
