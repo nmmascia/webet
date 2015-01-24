@@ -14,6 +14,8 @@
       <button class="complete_bet_button">Complete</button>
       {{/if}}
     </div>
-    {{> editBetForm}}
+    {{#if showEditForm}}
+      {{> editBetForm}}
+    {{/if}}
   </div>
 </template>

@@ -5,6 +5,16 @@ Template.betItem.helpers({
 
   pendingStatus: function() {
     return ( this.status === "pending" ) ? true : false;
+  },
+
+  showEditForm: function() {
+    if(Session.get("edit")) {
+      return true
+    }
+    else {
+      Session.set("edit", false)
+      return false
+    }
   }
 });
 
@@ -23,5 +33,9 @@ Template.betItem.events({
     Bets.update({ _id: this._id },
       { $set: { status: "completed" }
     });
+  },
+
+  'click .edit_button' : function() {
+    Session.set('edit', !Session.get('edit'))
   }
 });
