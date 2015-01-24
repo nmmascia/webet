@@ -12,11 +12,3 @@ body {
 .main-navigation {
   width: 100%;
 }
-
-.open-bets {
-  display: none;
-}
-
-.completed-bets {
-  display: none;
-}
