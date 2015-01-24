@@ -1,7 +1,11 @@
 Template.betsList.helpers({
   bets: function() {
-  var current_status = Session.get("status");
-  return Bets.find({$and: [{status: current_status}, {bettors: Session.get("user")}]})
+    var current_status = Session.get( "status" );
+
+    return Bets.find({ $and:
+      [ { status: current_status },
+        { bettors: Session.get( "user" ) }
+    ]});
   }
 });
 
