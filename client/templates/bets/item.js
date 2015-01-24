@@ -9,12 +9,16 @@ Template.betItem.helpers({
 
   showEditForm: function() {
     if(Session.get("edit")) {
-      return true
+      return true;
     }
     else {
       Session.set("edit", false)
-      return false
+      return false;
     }
+  },
+
+  completedStatus: function() {
+    return ( this.status === "completed" ) ? true : false;
   }
 });
 
