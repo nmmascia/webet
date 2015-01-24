@@ -5,26 +5,10 @@
     <button type="button" class="pending-button">In Progress</button>
     <button type="button" class="completed-button">Completed</button>
   </div><br>
-  <div class="open-bets">
+  <div class="bets">
     <h2>Open</h2><br>
     <ul>
-      {{#each open_bets currentUser}}
-        <li>{{> betItem}}</li><br>
-      {{/each}}
-    </ul>
-  </div>
-  <div class="pending-bets">
-    <h2>In Progress</h2><br>
-    <ul>
-      {{#each pending_bets currentUser}}
-        <li>{{> betItem}}</li><br>
-      {{/each}}
-    </ul>
-  </div>
-  <div class="completed-bets">
-    <h2>Completed</h2><br>
-    <ul>
-      {{#each completed_bets currentUser}}
+      {{#each bets}}
         <li>{{> betItem}}</li><br>
       {{/each}}
     </ul>

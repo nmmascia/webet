@@ -1,47 +1,21 @@
 Template.betsList.helpers({
-  open_bets: function(user) {
-    return Bets.find({
-    $and : [
-      {status: "open"},
-      {$or: [{challenger: user.username},
-        {defender: user.username}]
-      }
-    ]
-  })},
-  pending_bets: function(user) {
-    return Bets.find({
-    $and : [
-      {status: "pending"},
-      {$or: [{challenger: user.username},
-        {defender: user.username}]
-      }
-    ]
-  })},
-  completed_bets: function(user) {
-    return Bets.find({
-    $and : [
-      {status: "completed"},
-      {$or: [{challenger: user.username},
-        {defender: user.username}]
-      }
-    ]
-  })},
+  bets: function() {
+  var current_status = Session.get("status");
+  return Bets.find({$and: [{status: current_status}, {bettors: Session.get("user")}]})
+  }
 });
 
 Template.betsList.events({
   "click .open-button": function() {
-    $(".open-bets").show();
-    $(".pending-bets").hide();
-    $(".completed-bets").hide();
+    Session.set("user", Meteor.user().username)
+    Session.set("status", "open")
   },
   "click .pending-button": function() {
-    $(".pending-bets").show();
-    $(".open-bets").hide();
-    $(".completed-bets").hide();
+    Session.set("user", Meteor.user().username)
+    Session.set("status", "pending")
   },
   "click .completed-button": function() {
-    $(".completed-bets").show();
-    $(".pending-bets").hide();
-    $(".open-bets").hide();
+    Session.set("user", Meteor.user().username)
+    Session.set("status", "completed")
   }
 })
