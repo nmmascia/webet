@@ -7,6 +7,10 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #C6DFF2;
 }
 
+.bet-title {
+  color: #F4FA1C;
+}
+
 .button {
   background-color: #00C0FF;
   border-color: #00C0FF;
