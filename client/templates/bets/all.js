@@ -1,9 +1,9 @@
 Template.betsList.helpers({
   bets: function() {
-    var current_status = Session.get( "status" );
+    var currentStatus = Session.get( "status" );
 
     return Bets.find({ $and:
-      [ { status: current_status },
+      [ { status: currentStatus },
         { bettors: Session.get( "user" ) }
     ]});
   }
