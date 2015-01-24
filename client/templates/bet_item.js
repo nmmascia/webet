@@ -1,3 +1,14 @@
+Template.betItem.helpers({
+  openStatus: function() {
+    if (this.status === "open"){
+      return true
+    }
+    else {
+      return false
+    }
+  }
+})
+
 Template.betItem.events({
   'click #remove' : function(){
     Bets.remove(this._id)
