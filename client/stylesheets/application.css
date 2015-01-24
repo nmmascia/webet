@@ -1,9 +1,21 @@
-html {
-  width: 100%;
-}
 body {
-  width: 100%;
+  background-color: #294F6D;
 }
-.main-navigation {
-  width: 100%;
+
+.login-link {
+  color: #4EB3FF;
+}
+
+.long {
+  padding: 1em 4em !important;
+}
+
+.welcome {
+  margin-top: 50%;
+}
+
+.welcome h1 {
+  font-family: 'Lobster', cursive;
+  color: #C6DFF2;
+  font-size: 3em;
 }
