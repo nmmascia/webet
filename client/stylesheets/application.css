@@ -1,5 +1,9 @@
 body {
   background-color: #294F6D;
+}
+
+body, h1, h2, h3, h4, h5, li, p {
+  font-family: 'Noto Sans', sans-serif;
   color: #C6DFF2;
 }
 
