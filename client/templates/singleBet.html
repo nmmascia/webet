@@ -1,0 +1,10 @@
+<template name="singleBet">
+  <div class="singlebet">
+    <div class="bet-content">
+      <a href="{{pathFor 'singleBet'}}"><h2>{{title}} - {{wager}}</h2></a>
+      <h3>Status: {{status}}</h3>
+      <h3>Challenger: {{bettors.[0]}}</h3>
+      <h3>Defender: {{bettors.[1]}}</h3>
+    </div>
+  </div>
+</template>
