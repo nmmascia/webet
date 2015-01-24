@@ -8,7 +8,7 @@ var createBetNotification = function(bet){
 }
 
 Template.createBetForm.events({
-  "submit .create-bet": function(event) {
+  "submit .create-bet" : function(event){
     var status = "open",
         title = event.target.betTitle.value;
         wager = event.target.betWager.value;
