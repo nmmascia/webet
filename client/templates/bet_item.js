@@ -24,5 +24,11 @@ Template.betItem.events({
 
   'click .accept_button' : function() {
     Bets.update({_id: this._id}, { $set: { status: "pending" }})
+  },
+
+  'click .complete_bet_button' : function() {
+    Bets.update({_id: this._id}, { $set: {
+      status: "completed"}})
   }
+
 })
