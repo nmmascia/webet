@@ -46,7 +46,7 @@ Template.betItem.events({
         defender_requested = event.target.defender.value;
         defender = Meteor.users.findOne({ username: defender_requested });
 
-    Bets.update({ _id: this._id }, {
+      Bets.update({ _id: this._id }, {
         bettors: [ user.username, defender.username ],
         status: "open",
         title: title,
