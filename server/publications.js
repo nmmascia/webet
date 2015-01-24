@@ -5,3 +5,7 @@ Meteor.publish('bets', function(){
 Meteor.publish('betNotifications', function(){
   return BetNotifications.find();
 });
+
+Meteor.publish('messages', function(){
+  return Messages.find();
+});
