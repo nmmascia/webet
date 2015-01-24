@@ -1,5 +1,5 @@
 Template.betsList.helpers({
-  bets: function() {
+  bets: function(){
     var currentStatus = Session.get( "status" );
 
     return Bets.find({ $and:

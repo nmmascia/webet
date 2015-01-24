@@ -1,3 +1,12 @@
+var createBetNotification = function(bet){
+  var bet = Bets.findOne({ _id: bet });
+
+  BetNotifications.insert({
+    toNotify: bet.bettors[1],
+    betBy: bet.bettors[0]
+  });
+}
+
 Template.createBetForm.events({
   "submit .create-bet": function(event) {
     var status = "open",
@@ -7,11 +16,13 @@ Template.createBetForm.events({
         defender_requested = event.target.defender.value;
         defender = Meteor.users.findOne({ username: defender_requested });
 
-    Bets.insert({
+    var bet = Bets.insert({
       bettors: [ user.username, defender.username ],
       status: status,
       title: title,
       wager: wager
     });
+
+    createBetNotification(bet);
   }
 });
