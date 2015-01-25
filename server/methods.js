@@ -7,7 +7,6 @@ Meteor.methods({
       title: title,
       wager: wager,
       createdAt: new Date()
-      createdBy:
     });
 
   },
