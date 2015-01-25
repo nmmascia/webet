@@ -5,7 +5,8 @@ Meteor.methods({
       bettors: [ user, defender ],
       status: "open",
       title: title,
-      wager: wager
+      wager: wager,
+      createdAt: new Date()
     });
 
   },
@@ -27,6 +28,7 @@ Meteor.methods({
       wager: wager
     });
   },
+
   createMessage: function(message, sender, bet_id) {
 
     Messages.insert({
