@@ -40,6 +40,7 @@ Template.betItem.events({
 
   'click .complete_bet_button' : function(){
     Meteor.call("updateStatus", this._id, "completed");
+    Session.set("completed?", true)
   },
 
   'click .edit_button' : function(){
