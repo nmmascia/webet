@@ -1,6 +1,21 @@
 <template name="navigation">
-  <nav class="main-navigation">
-    <a href="{{ pathFor 'dashboard' }}">Dashboard</a>
-    {{> loginButtons }}
+  <nav class="tab-bar">
+    <section class="left-small">
+      <a href="#" class="left-off-canvas-toggle menu-icon"><span></span></a>
+    </section>
+
+    <section class="right tab-bar-section">
+      <h1 class="title">{{> loginButtons }}</h1>
+    </section>
+
   </nav>
+
+  <aside class="left-off-canvas-menu">
+      <ul>
+        <li><a href="{{ pathFor 'dashboard' }}">Dashboard</a></li>
+      </ul>
+  </aside>
+
+  <a class="exit-off-canvas"></a>
+
 </template>

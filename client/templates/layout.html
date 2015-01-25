@@ -8,6 +8,10 @@
 </body>
 
 <template name="layout">
-  {{> navigation }}
-  {{> yield }}
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+      {{> navigation }}
+      {{> yield }}
+    </div>
+  </div>
 </template>

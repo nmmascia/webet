@@ -5,7 +5,6 @@ accounts-password@1.0.6
 accounts-ui@1.1.4
 accounts-ui-unstyled@1.1.6
 alanning:package-stubber@0.0.9
-amplify@1.0.0
 application-configuration@1.0.4
 autoupdate@1.1.5
 base64@1.0.2
@@ -78,7 +77,6 @@ ui@1.0.5
 underscore@1.0.2
 url@1.0.3
 velocity:core@0.4.5
-velocity:html-reporter@0.4.1
 velocity:meteor-stubs@1.0.0_2
 velocity:node-soft-mirror@0.2.8
 velocity:shim@0.1.0
