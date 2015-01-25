@@ -9,7 +9,17 @@ Template.betItem.helpers({
 
   completedStatus: function() {
     return ( this.status === "completed" ) ? true : false;
-  }
+  },
+
+  showEditForm: function() {
+    if(Session.get("edit")) {
+      return true;
+    }
+    else {
+      Session.set("edit", false)
+      return false;
+    }
+  },
 });
 
 Template.betItem.events({
