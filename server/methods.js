@@ -8,5 +8,9 @@ Meteor.methods({
       wager: wager
     });
 
+  },
+
+  deleteBet: function(bet_id){
+    Bets.remove(bet_id)
   }
 })
