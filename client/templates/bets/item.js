@@ -46,6 +46,10 @@ Template.betItem.events({
     Session.set('edit', !Session.get('edit'));
   },
 
+  'click .select_winner' : function(){
+    Meteor.call("completeBet", winner)
+  },
+
   'submit .edit-bet' : function(event){
     event.preventDefault();
 
