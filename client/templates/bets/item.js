@@ -37,5 +37,28 @@ Template.betItem.events({
     Bets.update({ _id: this._id },
       { $set: { status: "completed" }
     });
+  },
+
+  'click .edit_button' : function() {
+    Session.set('edit', !Session.get('edit'));
+  },
+
+  'submit .edit-bet' : function(event) {
+    event.preventDefault();
+
+    var title = event.target.betTitle.value,
+        wager = event.target.betWager.value,
+        user = Meteor.user(),
+        defender_requested = event.target.defender.value,
+        defender = Meteor.users.findOne({ username: defender_requested });
+
+    Bets.update({ _id: this._id }, {
+      bettors: [ user.username, defender.username ],
+      status: "open",
+      title: title,
+      wager: wager
+    });
+
+    Session.set('edit', !Session.get('edit'));
   }
 });
