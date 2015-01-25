@@ -3,7 +3,8 @@ var createBetNotification = function(bet){
 
   BetNotifications.insert({
     toNotify: bet.bettors[1],
-    betBy: bet.bettors[0]
+    betBy: bet.bettors[0],
+    bet: bet._id
   });
 }
 
