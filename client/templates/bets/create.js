@@ -20,5 +20,7 @@ Template.createBetForm.events({
 
     Meteor.call("createBet", username, defender, title, wager)
 
+    Router.go('/bets')
+
   }
 });
