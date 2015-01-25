@@ -8,7 +8,7 @@ var createBetNotification = function(bet){
   });
 }
 
-Template.createBetForm.events({
+  Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
 
@@ -16,7 +16,8 @@ Template.createBetForm.events({
         wager = event.target.betWager.value,
         user = Meteor.user(),
         username = user.username,
-        defender = event.target.defender.value;
+        defender = event.target.defender.value,
+        type = "new"
 
     if (Meteor.users.find({username: defender}).count() === 0){
 
@@ -28,6 +29,8 @@ Template.createBetForm.events({
     }
 
     Meteor.call("createBet", username, defender, title, wager)
+
+    Meteor.call("createBetNotification", username, defender, type)
 
     Router.go('/bets')
 

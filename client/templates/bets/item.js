@@ -35,7 +35,10 @@ Template.betItem.events({
   },
 
   'click .accept_button' : function(){
+
      Meteor.call("updateStatus", this._id, "pending");
+
+     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "accepted", this._id)
   },
 
   'click .complete_bet_button' : function(){
@@ -51,6 +54,7 @@ Template.betItem.events({
     var winner =  event.target.children.choose_winner.value
     Meteor.call("completeBet", this._id, winner )
     Session.set("complete?", false)
+    Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed", this._id)
   },
 
   'submit .edit-bet' : function(event){

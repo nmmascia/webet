@@ -11,6 +11,17 @@ Meteor.methods({
 
   },
 
+  createBetNotification: function(user, defender, type, bet_id) {
+
+    BetNotifications.insert({
+      toNotify: defender,
+      betBy: user,
+      type: type,
+      bet_id: bet_id
+    });
+  },
+
+
   deleteBet: function(bet_id){
     Bets.remove(bet_id)
   },
