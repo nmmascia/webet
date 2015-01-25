@@ -1,12 +1,19 @@
 <template name="dashboard">
-  <div class="notifications-count">
-    <p>You have <span class="bet-notification">{{ notificationsCount }}</span> new bets!</p>
-  </div>
-  <div class="dash-body">
-    <h1 class="text-center">{{ currentUser.username }}</h1>
-    <div class="button-container text-center">
-      <a href="/bet" class="new-bet-button button small radius lime">New Bet</a>
-      <a href="/bets" class="view-bet-button button small radius">View Bets</a>
+  <div class="small-12 columns">
+    <div class="notifications-count">
+      <p>You have <span class="bet-notification">{{ notificationsCount }}</span> new bets!</p>
+    </div>
+    <div class="dash-body">
+      <h1 class="text-center">{{ currentUser.username }}</h1>
+      <ul class="small-block-grid-3 text-center">
+        <li><button class="square open"><h2>1</h2></button></li>
+        <li><button class="square pending"><h2>5</h2></button></li>
+        <li><button class="square completed"><h2>99+</h2></button></li>
+      </ul>
+      <div class="button-container text-center">
+        <a href="/bet" class="new-bet-button button small radius lime">New Bet</a>
+        <a href="/bets" class="view-bet-button button small radius">View Bets</a>
+      </div>
     </div>
   </div>
 </template>

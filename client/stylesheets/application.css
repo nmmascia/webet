@@ -56,6 +56,32 @@ body, h1, h2, h3, h4, h5, li, p {
   overflow-y: auto;
 }
 
+.square {
+  width: 5em;
+  height: 5em;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 0px !important;
+}
+
+.square h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.square.completed {
+  background-color: #FA4242;
+}
+
+.square.open {
+  background-color: #00E2FF;
+}
+
+.square.pending {
+  background-color: #E56F27;
+}
+
 .submit-button {
   margin-top: 1em;
 }
