@@ -13,3 +13,5 @@ accounts-facebook
 multiply:iron-router-progress
 sacha:spin
 foundation
+sanjo:jasmine
+velocity:html-reporter
