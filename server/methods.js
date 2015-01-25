@@ -15,6 +15,17 @@ Meteor.methods({
     Bets.remove(bet_id)
   },
 
+  completeBet: function(bet_id, winner){
+    Bets.update(
+      { _id: bet_id },
+      { $set:
+        { status: "completed",
+        winner: winner,
+        paid: false }
+      }
+    )
+  },
+
   updateStatus: function(bet_id, status){
     Bets.update({ _id : bet_id }, { $set: { status: status }})
   },
