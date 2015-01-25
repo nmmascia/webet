@@ -19,7 +19,7 @@ Meteor.methods({
     Bets.update(
       { _id: bet_id },
       { $set:
-        { status: "complete",
+        { status: "completed",
         winner: winner,
         paid: false }
       }
