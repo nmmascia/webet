@@ -18,6 +18,11 @@ Template.createBetForm.events({
         username = user.username,
         defender = event.target.defender.value;
 
+    if (Meteor.users.find({username: defender}).count() === 0){
+
+      throw new Meteor.Error(alert( "Sorry the Username you are trying to challenge is not valid!"))
+    }
+
     Meteor.call("createBet", username, defender, title, wager)
 
     Router.go('/bets')
