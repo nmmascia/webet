@@ -11,10 +11,14 @@ Template.entry.events({
     event.preventDefault();
 
     var message = event.target.message.value,
-         sentBy = Meteor.user().username,
-            bet = this._id;
+         user = Meteor.user().username,
+         defender = this.bettors[1],
+         type = "New Message"
+          bet = this._id;
 
-    Meteor.call("createMessage", message, sentBy, bet);
+    Meteor.call("createMessage", message, user, bet);
+
+    Meteor.call("createBetNotification", user, defender, type, bet);
 
     event.target.message.value = '';
   }
