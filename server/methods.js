@@ -26,5 +26,13 @@ Meteor.methods({
       title: title,
       wager: wager
     });
+  },
+  createMessage: function(message, sender, bet_id) {
+
+    Messages.insert({
+      message: message,
+      sentBy: sender,
+      bet: bet_id
+    })
   }
 })
