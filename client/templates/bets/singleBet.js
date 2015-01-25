@@ -44,10 +44,10 @@ Template.singleBet.events({
   },
 
   'submit .edit-bet' : function() {
-    var title = event.target.betTitle.value;
-        wager = event.target.betWager.value;
+    var title = event.target.betTitle.value,
+        wager = event.target.betWager.value,
         user = Meteor.user(),
-        defender_requested = event.target.defender.value;
+        defender_requested = event.target.defender.value,
         defender = Meteor.users.findOne({ username: defender_requested });
 
     Bets.update({ _id: this._id }, {
