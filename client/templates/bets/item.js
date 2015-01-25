@@ -19,6 +19,14 @@ Template.betItem.helpers({
       return false;
     }
   },
+    showCompleteBetForm: function(){
+      if( Session.get("complete?") ){
+        return true;
+      } else {
+        Session.set("completed?", false);
+        return false;
+      }
+    },
 });
 
 Template.betItem.events({
