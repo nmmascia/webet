@@ -10,26 +10,17 @@ var createBetNotification = function(bet){
 
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
+
     event.preventDefault();
-
-    var status = "open",
-        title = event.target.betTitle.value;
+      var title = event.target.betTitle.value;
         wager = event.target.betWager.value;
-        user = Meteor.user(),
-        defender_requested = event.target.defender.value;
-        defender = Meteor.users.findOne({ username: defender_requested });
+        user = Meteor.user()
+        username = user.username
+        defender = event.target.defender.value;
 
-    var bet = Bets.insert({
-      bettors: [ user.username, defender.username ],
-      status: status,
-      title: title,
-      wager: wager
-    });
+    Meteor.call("createBet", username, defender, title, wager)
 
-    event.target.betTitle.value = '';
-    event.target.betWager.value = '';
-    event.target.defender.value = '';
+    Router.go('/bets')
 
-    createBetNotification(bet);
   }
 });

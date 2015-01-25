@@ -23,19 +23,15 @@ Template.betItem.helpers({
 
 Template.betItem.events({
   'click .remove_bet_button' : function(){
-    Bets.remove( this._id );
+    Meteor.call("deleteBet", this._id);
   },
 
   'click .accept_button' : function(){
-    Bets.update({ _id: this._id },
-      { $set: { status: "pending" }
-    });
+     Meteor.call("updateStatus", this._id, "pending")
   },
 
   'click .complete_bet_button' : function(){
-    Bets.update({ _id: this._id },
-      { $set: { status: "completed" }
-    });
+    Meteor.call("updateStatus", this._id, "completed")
   },
 
   'click .edit_button' : function(){
@@ -47,16 +43,10 @@ Template.betItem.events({
 
     var title = event.target.betTitle.value,
         wager = event.target.betWager.value,
-        user = Meteor.user(),
-        defender_requested = event.target.defender.value,
-        defender = Meteor.users.findOne({ username: defender_requested });
+        user = Meteor.user().username,
+        defender = event.target.defender.value
 
-    Bets.update({ _id: this._id }, {
-      bettors: [ user.username, defender.username ],
-      status: "open",
-      title: title,
-      wager: wager
-    });
+    Meteor.call("editBet", this._id, user, defender, title, wager )
 
     Session.set('edit', !Session.get('edit'));
   }
