@@ -44,15 +44,9 @@ Template.betItem.events({
     var title = event.target.betTitle.value,
         wager = event.target.betWager.value,
         user = Meteor.user().username,
-        defender_requested = event.target.defender.value,
-        defender = event.target.defender
+        defender = event.target.defender.value
 
-    Bets.update({ _id: this._id }, {
-      bettors: [ user.username, defender.username ],
-      status: "open",
-      title: title,
-      wager: wager
-    });
+    Meteor.call("editBet", this._id, user, defender, title, wager )
 
     Session.set('edit', !Session.get('edit'));
   }
