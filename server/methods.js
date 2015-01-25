@@ -11,12 +11,13 @@ Meteor.methods({
 
   },
 
-  createBetNotification: function(user, defender, type) {
+  createBetNotification: function(user, defender, type, bet_id) {
 
     BetNotifications.insert({
       toNotify: defender,
       betBy: user,
-      type: type
+      type: type,
+      bet_id: bet_id
     });
   },
 
