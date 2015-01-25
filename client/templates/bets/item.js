@@ -27,15 +27,11 @@ Template.betItem.events({
   },
 
   'click .accept_button' : function(){
-    Bets.update({ _id: this._id },
-      { $set: { status: "pending" }
-    });
+     Meteor.call("updateStatus", this._id, "pending")
   },
 
   'click .complete_bet_button' : function(){
-    Bets.update({ _id: this._id },
-      { $set: { status: "completed" }
-    });
+    Meteor.call("updateStatus", this._id, "completed")
   },
 
   'click .edit_button' : function(){
@@ -47,9 +43,9 @@ Template.betItem.events({
 
     var title = event.target.betTitle.value,
         wager = event.target.betWager.value,
-        user = Meteor.user(),
+        user = Meteor.user().username,
         defender_requested = event.target.defender.value,
-        defender = Meteor.users.findOne({ username: defender_requested });
+        defender = event.target.defender
 
     Bets.update({ _id: this._id }, {
       bettors: [ user.username, defender.username ],
