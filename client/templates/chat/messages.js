@@ -14,7 +14,7 @@ Template.entry.events({
          sentBy = Meteor.user().username,
             bet = this._id;
 
-    Meteor.call("createMessage", message, sentBy, bet)
+    Meteor.call("createMessage", message, sentBy, bet);
 
     event.target.message.value = '';
   }

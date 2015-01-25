@@ -10,12 +10,12 @@ var createBetNotification = function(bet){
 
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
-
     event.preventDefault();
-      var title = event.target.betTitle.value;
-        wager = event.target.betWager.value;
-        user = Meteor.user()
-        username = user.username
+
+    var title = event.target.betTitle.value,
+        wager = event.target.betWager.value,
+        user = Meteor.user(),
+        username = user.username,
         defender = event.target.defender.value;
 
     Meteor.call("createBet", username, defender, title, wager)
