@@ -14,5 +14,14 @@ describe("Template.createBetForm.events", function(){
 
    it("should create a bet with a status", function(){
     expect(Bets.findOne(testBet).status).toEqual("open")
-  });
+    });
+
+   it("should create a bet with a title", function(){
+    expect(Bets.findOne(testBet).title.length).not.toEqual(0)
+    });
+
+   it("should create a bet with a wager", function(){
+    expect(Bets.findOne(testBet).wager.length).not.toEqual(0)
+    });
+
 });
