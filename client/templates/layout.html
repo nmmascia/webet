@@ -8,10 +8,15 @@
 </body>
 
 <template name="layout">
-  <div class="off-canvas-wrap">
+  <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
       {{> navigation }}
+      {{> loginButtons }}
       {{> yield }}
+      <a class="exit-off-canvas"></a>
     </div>
   </div>
+  <script>
+    $(document).foundation('reflow');
+  </script>
 </template>

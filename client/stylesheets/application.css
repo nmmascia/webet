@@ -47,6 +47,15 @@ body, h1, h2, h3, h4, h5, li, p {
   padding: 1em 4em !important;
 }
 
+.off-canvas-wrap, .inner-wrap {
+  min-height: 100%;
+}
+
+.off-canvas-wrap {
+  height: 100%;
+  overflow-y: auto;
+}
+
 .submit-button {
   margin-top: 1em;
 }

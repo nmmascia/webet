@@ -1,21 +1,44 @@
 <template name="navigation">
-  <nav class="tab-bar">
+  <nav class="tab-bar" data-topbar="topbar">
     <section class="left-small">
       <a href="#" class="left-off-canvas-toggle menu-icon"><span></span></a>
     </section>
 
-    <section class="right tab-bar-section">
-      <h1 class="title">{{> loginButtons }}</h1>
+    <section class="middle tab-bar-section">
+      <h1>WeBet</h1>
+    </section>
+
+    <section class="right-small">
+      <a href="#" class="right-off-canvas-toggle menu-icon"><span></span></a>
     </section>
 
   </nav>
 
   <aside class="left-off-canvas-menu">
-      <ul>
-        <li><a href="{{ pathFor 'dashboard' }}">Dashboard</a></li>
-      </ul>
+    <ul class="off-canvas-list">
+      {{#if currentUser}}
+        <li><label>Get Started</label></li>
+        <li><a href="/bet">Create a Bet</a></li>
+        <li><label>View Bets</label></li>
+        <li><a href="/bet">New Bets</a></li>
+        <li><a href="/bet">Bets in Progress</a></li>
+        <li><a href="/bet">Completed Bets</a></li>
+        <li><label>{{currentUser.username}}</label></li>
+        <li><a href="{{ pathFor 'dashboard' }}">My Profile</a></li>
+        <li><a href="{{ pathFor 'dashboard' }}">Friend List</a></li>
+        <li><a href="#">Logout</a></li>
+      {{else}}
+        <li><label>Welcome</label></li>
+        <li><a href="#">Sign up</a></li>
+        <li><a href="#">Login</a></li>
+      {{/if}}
+    </ul>
   </aside>
 
-  <a class="exit-off-canvas"></a>
+  <aside class="right-off-canvas-menu">
+    <ul class="off-canvas-list">
+      <li><label>Notifications</label></li>
+    </ul>
+  </aside>
 
 </template>
