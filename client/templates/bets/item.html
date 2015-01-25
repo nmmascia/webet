@@ -1,18 +1,18 @@
 <template name="betItem">
   <div class="bet">
     <div class="bet-content">
-      <a href="{{pathFor 'singleBet'}}"><h2><span class="bet-title">{{title}}</span> - Wager: {{wager}}</h2></a>
-      {{#if openStatus }}
+      <a href="{{pathFor 'singleBet'}}"><h2><span class="bet-title">{{ title }}</span> - Wager: {{ wager }}</h2></a>
+      {{ #if openStatus }}
         <button class="accept_button button radius lime small">Accept</button>
         <button class="edit_button button radius orange small">Edit</button>
         <button class="remove_bet_button button radius pink small">Remove Bet</button>
-      {{/if}}
-      {{#if pendingStatus }}
+      {{ /if }}
+      {{ #if pendingStatus }}
         <button class="complete_bet_button button radius lime small">Complete</button>
-      {{/if}}
+      {{ /if }}
     </div>
-    {{#if showEditForm}}
-      {{> editBetForm}}
-    {{/if}}
+    {{ #if showEditForm }}
+      {{ > editBetForm }}
+    {{ /if }}
   </div>
 </template>
