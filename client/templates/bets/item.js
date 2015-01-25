@@ -23,7 +23,7 @@ Template.betItem.helpers({
       if( Session.get("complete?") ){
         return true;
       } else {
-        Session.set("completed?", false);
+        Session.set("complete?", false);
         return false;
       }
     },
@@ -39,8 +39,7 @@ Template.betItem.events({
   },
 
   'click .complete_bet_button' : function(){
-    Meteor.call("updateStatus", this._id, "completed");
-    Session.set("completed?", true)
+    Session.set("complete?", true)
   },
 
   'click .edit_button' : function(){
