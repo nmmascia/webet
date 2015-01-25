@@ -13,7 +13,7 @@ Template.entry.events({
     var message = event.target.message.value,
          user = Meteor.user().username,
          defender = this.bettors[1],
-         type = "New Message"
+         type = "message"
           bet = this._id;
 
     Meteor.call("createMessage", message, user, bet);
