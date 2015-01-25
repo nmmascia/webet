@@ -35,7 +35,10 @@ Template.betItem.events({
   },
 
   'click .accept_button' : function(){
+
      Meteor.call("updateStatus", this._id, "pending");
+
+     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "Bet Accepted", this._id)
   },
 
   'click .complete_bet_button' : function(){
