@@ -1,14 +1,10 @@
-Template.betItem.helpers({
+Template.singleBet.helpers({
   openStatus: function() {
     return ( this.status === "open" ) ? true : false;
   },
 
   pendingStatus: function() {
     return ( this.status === "pending" ) ? true : false;
-  },
-
-  completedStatus: function() {
-    return ( this.status === "completed" ) ? true : false;
   },
 
   showEditForm: function() {
@@ -20,9 +16,13 @@ Template.betItem.helpers({
       return false;
     }
   },
+
+  completedStatus: function() {
+    return ( this.status === "completed" ) ? true : false;
+  }
 });
 
-Template.betItem.events({
+Template.singleBet.events({
   'click .remove_bet_button' : function(){
     Bets.remove( this._id );
   },
@@ -43,9 +43,7 @@ Template.betItem.events({
     Session.set('edit', !Session.get('edit'));
   },
 
-  'submit .edit-bet' : function(event) {
-    event.preventDefault();
-
+  'submit .edit-bet' : function() {
     var title = event.target.betTitle.value,
         wager = event.target.betWager.value,
         user = Meteor.user(),
@@ -58,7 +56,5 @@ Template.betItem.events({
       title: title,
       wager: wager
     });
-
-    Session.set('edit', !Session.get('edit'));
   }
 });

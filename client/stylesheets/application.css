@@ -1,0 +1,62 @@
+body {
+  background-color: #294F6D;
+}
+
+body, h1, h2, h3, h4, h5, li, p {
+  font-family: 'Noto Sans', sans-serif;
+  color: #C6DFF2;
+}
+
+.bet-title {
+  color: #F4FA1C;
+}
+
+.button {
+  background-color: #00C0FF;
+  border-color: #00C0FF;
+  color: #fff;
+}
+
+.button.lime {
+  background-color: #86CA3C;
+  border-color: #86CA3C;
+  color: #FFF;
+}
+
+.button.orange {
+  background-color: #FA9B1C;
+  border-color: #FA9B1C;
+  color: #FFF;
+}
+
+.button.pink{
+  background-color: #FF0061;
+  border-color: #FF0061;
+  color: #fff;
+}
+
+.create-bet {
+  margin-top: 5em;
+}
+
+.login-link {
+  color: #4EB3FF;
+}
+
+.long {
+  padding: 1em 4em !important;
+}
+
+.submit-button {
+  margin-top: 1em;
+}
+
+.welcome {
+  margin-top: 50%;
+}
+
+.welcome h1 {
+  font-family: 'Lobster', cursive;
+  color: #C6DFF2;
+  font-size: 3em;
+}

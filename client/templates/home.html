@@ -1,7 +1,7 @@
 <template name="home">
   {{#unless currentUser }}
-    <p>Show login</p>
+    {{> welcome}}
   {{else}}
-      {{> dashboard}}
+    {{> dashboard}}
   {{/unless}}
 </template>
