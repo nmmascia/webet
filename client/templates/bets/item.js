@@ -1,21 +1,20 @@
 Template.betItem.helpers({
-  openStatus: function() {
+  openStatus: function(){
     return ( this.status === "open" ) ? true : false;
   },
 
-  pendingStatus: function() {
+  pendingStatus: function(){
     return ( this.status === "pending" ) ? true : false;
   },
 
-  completedStatus: function() {
+  completedStatus: function(){
     return ( this.status === "completed" ) ? true : false;
   },
 
-  showEditForm: function() {
-    if(Session.get("edit")) {
+  showEditForm: function(){
+    if( Session.get("edit") ){
       return true;
-    }
-    else {
+    } else {
       Session.set("edit", false)
       return false;
     }
@@ -27,23 +26,23 @@ Template.betItem.events({
     Bets.remove( this._id );
   },
 
-  'click .accept_button' : function() {
+  'click .accept_button' : function(){
     Bets.update({ _id: this._id },
       { $set: { status: "pending" }
     });
   },
 
-  'click .complete_bet_button' : function() {
+  'click .complete_bet_button' : function(){
     Bets.update({ _id: this._id },
       { $set: { status: "completed" }
     });
   },
 
-  'click .edit_button' : function() {
+  'click .edit_button' : function(){
     Session.set('edit', !Session.get('edit'));
   },
 
-  'submit .edit-bet' : function(event) {
+  'submit .edit-bet' : function(event){
     event.preventDefault();
 
     var title = event.target.betTitle.value,

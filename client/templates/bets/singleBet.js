@@ -7,8 +7,8 @@ Template.singleBet.helpers({
     return ( this.status === "pending" ) ? true : false;
   },
 
-  showEditForm: function() {
-    if(Session.get("edit")) {
+  showEditForm: function(){
+    if( Session.get("edit") ){
       return true;
     }
     else {
@@ -27,23 +27,23 @@ Template.singleBet.events({
     Bets.remove( this._id );
   },
 
-  'click .accept_button' : function() {
+  'click .accept_button' : function(){
     Bets.update({ _id: this._id },
       { $set: { status: "pending" }
     });
   },
 
-  'click .complete_bet_button' : function() {
+  'click .complete_bet_button' : function(){
     Bets.update({ _id: this._id },
       { $set: { status: "completed" }
     });
   },
 
-  'click .edit_button' : function() {
+  'click .edit_button' : function(){
     Session.set('edit', !Session.get('edit'));
   },
 
-  'submit .edit-bet' : function() {
+  'submit .edit-bet' : function(){
     var title = event.target.betTitle.value,
         wager = event.target.betWager.value,
         user = Meteor.user(),
