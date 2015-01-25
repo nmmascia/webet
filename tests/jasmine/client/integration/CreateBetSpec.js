@@ -8,4 +8,9 @@ describe("Template.createBetForm.events", function(){
     var testBet = Bets.insert({title: "I bet u fall off that one foot skateboard", wager: "a beach ball in a bag"})
     expect(Bets.findOne(testBet).wager).toEqual("a beach ball in a bag")
   });
+
+   it("should create a bet with a status", function(){
+    var testBet = Bets.insert({title: "I bet u fall off that one foot skateboard", wager: "a beach ball in a bag", status: "open"})
+    expect(Bets.findOne(testBet).status).toEqual("open")
+  });
 });
