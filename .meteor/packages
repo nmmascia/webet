@@ -12,6 +12,6 @@ accounts-ui
 accounts-facebook
 multiply:iron-router-progress
 sacha:spin
-foundation
 sanjo:jasmine
 velocity:html-reporter
+mrt:foundation-5
