@@ -15,7 +15,7 @@ Template.betItem.helpers({
     if( Session.get("edit") ){
       return true;
     } else {
-      Session.set("edit", false)
+      Session.set("edit", false);
       return false;
     }
   },
