@@ -23,4 +23,8 @@ describe("Template.createBetForm.events", function(){
     expect(Bets.findOne(testBet).status).not.toEqual("pending")
   });
 
+  it("can't create a bet with the status completed", function(){
+    expect(Bets.findOne(testBet).status).not.toEqual("completed")
+  });
+
 });
