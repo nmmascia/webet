@@ -43,6 +43,12 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #4EB3FF;
 }
 
+.logo-text {
+  font-size: 3.5em;
+  font-family: 'Lobster', cursive;
+  color: #C6DFF2;
+}
+
 .long {
   padding: 1em 4em !important;
 }
@@ -86,12 +92,10 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-top: 1em;
 }
 
-.welcome {
-  margin-top: 50%;
+.username {
+
 }
 
-.welcome h1 {
-  font-family: 'Lobster', cursive;
-  color: #C6DFF2;
-  font-size: 3em;
+.welcome {
+  margin-top: 35%;
 }
