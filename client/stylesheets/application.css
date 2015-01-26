@@ -1,5 +1,5 @@
 body {
-  background-color: #294F6D;
+  background-color: #FDFEFF;
 }
 
 body, h1, h2, h3, h4, h5, li, p {
@@ -13,6 +13,10 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .bet-title {
   color: #F4FA1C;
+}
+
+.blue {
+  color: #00E2FF
 }
 
 .button {
@@ -37,6 +41,10 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #FF0061;
   border-color: #FF0061;
   color: #fff;
+}
+
+.crazy-yellow {
+  color: #EFFF00;
 }
 
 .create-bet {
@@ -64,7 +72,7 @@ body, h1, h2, h3, h4, h5, li, p {
 .lose-stats {
   height: 5em;
   border-radius: 5px;
-  background-color: #4A6FFF;
+  background-color: #EC3F3F;
   margin-bottom: 1.5em;
   font-size: 1em;
 }
@@ -93,15 +101,15 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .square.completed {
-  background-color: #FA4242;
+  background-color: #646F81;
 }
 
 .square.open {
-  background-color: #00E2FF;
+  background-color: #FCC900;
 }
 
 .square.pending {
-  background-color: #E56F27;
+  background-color: #00C582;
 }
 
 .stats {
@@ -117,15 +125,16 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .username {
   font-family: 'Lato', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 3em;
   letter-spacing: 1.5px;
+  color: #333;
 }
 
 .win-stats {
   height: 5em;
   border-radius: 5px;
-  background-color: #25E888;
+  background-color: #0EB2ED;
   margin-bottom: 1.5em;
 }
 
