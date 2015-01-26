@@ -1,13 +1,13 @@
 <template name="friendsList">
-<h3>Friends</h3>
+  <h3>Friends</h3>
 
-<form class="search_friends">
-  <input type="text" name="find_friend" placeholder="Search for friends" class="search_bar">
-  <input type="submit" value="Find Friends">
-</form>
+  <form class="search_friends">
+    <input type="text" name="find_friend" placeholder="Search for friends" class="search_bar">
+    <input type="submit" value="Find Friends">
+  </form>
 
-
-
-
+  {{# each friends }}
+    <li>{{> friend }}</li><br>
+  {{/ each }}
 
 </template>
