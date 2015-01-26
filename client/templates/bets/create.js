@@ -41,6 +41,7 @@ Template.createBetForm.events({
     };
 
     MeteorCamera.getPicture(cameraOptions, function(error, data){
+      Images.insert(data);
       Session.set("photo", data);
     });
   }
