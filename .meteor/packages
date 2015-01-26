@@ -13,3 +13,4 @@ sacha:spin
 mdg:camera
 cfs:standard-packages
 cfs:gridfs
+cfs:filesystem
