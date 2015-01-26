@@ -36,16 +36,12 @@ Template.createBetForm.events({
     event.preventDefault();
 
     var cameraOptions = {
-      width: 800,
-      height: 600
+      width: 700,
+      height: 500
     };
 
     MeteorCamera.getPicture(cameraOptions, function(error, data){
       Session.set("photo", data);
     });
-  },
-
-  getPhoto: function(){
-    Session.get("photo");
   }
 });
