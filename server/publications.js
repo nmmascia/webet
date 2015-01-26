@@ -13,3 +13,7 @@ Meteor.publish('messages', function(){
 Meteor.publish('allUsernames', function(username){
   return Meteor.users.find();
 });
+
+Meteor.publish('images', function(){
+  return Images.find();
+});

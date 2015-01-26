@@ -13,7 +13,8 @@ Template.createBetForm.events({
         user = Meteor.user(),
         username = user.username,
         defender = event.target.defender.value,
-        type = "new";
+        betImage = Session.get('image._id'),
+        type = 'new';
 
     if (Meteor.users.find({username: defender}).count() === 0){
       throw new Meteor.Error(
