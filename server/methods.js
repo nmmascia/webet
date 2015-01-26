@@ -1,6 +1,5 @@
 Meteor.methods({
   createBet: function(user,defender,title,wager) {
-
     Bets.insert({
       bettors: [ user, defender ],
       status: "open",
@@ -8,11 +7,9 @@ Meteor.methods({
       wager: wager,
       createdAt: new Date()
     });
-
   },
 
   createBetNotification: function(user, defender, type, bet_id) {
-
     BetNotifications.insert({
       toNotify: defender,
       betBy: user,
@@ -31,10 +28,9 @@ Meteor.methods({
       { _id: bet_id },
       { $set:
         { status: "completed",
-        winner: winner,
-        paid: false }
-      }
-    )
+          winner: winner,
+          paid: false }
+    });
   },
 
   updateStatus: function(bet_id, status){
@@ -42,7 +38,6 @@ Meteor.methods({
   },
 
   editBet: function(bet_id, user, defender, title, wager) {
-
     Bets.update({ _id: bet_id }, {
       bettors: [ user, defender],
       status: "open",
@@ -52,11 +47,10 @@ Meteor.methods({
   },
 
   createMessage: function(message, sender, bet_id) {
-
     Messages.insert({
       message: message,
       sentBy: sender,
       bet: bet_id
-    })
+    });
   }
 })

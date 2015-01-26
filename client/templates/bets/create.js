@@ -17,7 +17,7 @@ var createBetNotification = function(bet){
         user = Meteor.user(),
         username = user.username,
         defender = event.target.defender.value,
-        type = "new"
+        type = "new";
 
     if (Meteor.users.find({username: defender}).count() === 0){
 
