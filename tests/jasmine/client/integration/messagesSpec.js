@@ -15,4 +15,8 @@ describe("Template.messages", function(){
      expect(Messages.findOne(testMessage).sentBy).toEqual("nick")
    });
 
+   it("has a bet id", function(){
+     expect(Messages.findOne(testMessage).bet).toEqual("gAeAgX8wbSpiic2mm")
+   });
+
 });
