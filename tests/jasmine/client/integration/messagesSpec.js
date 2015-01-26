@@ -19,4 +19,8 @@ describe("Template.messages", function(){
      expect(Messages.findOne(testMessage).bet).toEqual("gAeAgX8wbSpiic2mm")
    });
 
+   it("keeps track of the messages", function(){
+    expect(Messages.find({}).count()).toEqual(originalCount + 1)
+   });
+
 });
