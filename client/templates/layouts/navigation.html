@@ -25,7 +25,7 @@
         <li><a href="/bets" class="completed-button">Completed Bets</a></li>
         <li><label>{{ currentUser.username }}</label></li>
         <li><a href="{{ pathFor 'dashboard' }}">My Profile</a></li>
-        <li><a href="#">Friends List</a></li>
+        <li><a href="{{ pathFor 'friendsList' }}">Friends List</a></li>
       {{ else }}
         <li><label>Welcome</label></li>
         <li><a href="#">Sign up</a></li>
