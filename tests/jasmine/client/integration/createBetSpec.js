@@ -35,4 +35,8 @@ describe("Template.createBetForm.events", function(){
     expect(Bets.findOne(testBet).wager.length).not.toEqual(0)
   });
 
+  it("created bets increase the bet count by 1", function(){
+    expect(Bets.find({}).count()).toEqual(originalCount + 1)
+  });
+
 });
