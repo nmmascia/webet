@@ -20,10 +20,10 @@
         <li><label>Get Started</label></li>
         <li><a href="/bet">Create a Bet</a></li>
         <li><label>View Bets</label></li>
-        <li><a href="/bet">New Bets</a></li>
-        <li><a href="/bet">Bets in Progress</a></li>
-        <li><a href="/bet">Completed Bets</a></li>
-        <li><label>{{ currentUser.username }}</label></li>
+        <li><a href="/bets" class="open-button">New Bets</a></li>
+        <li><a href="/bets" class="pending-button">Bets in Progress</a></li>
+        <li><a href="/bets" class="completed-button">Completed Bets</a></li>
+        <li><label>{{currentUser.username}}</label></li>
         <li><a href="{{ pathFor 'dashboard' }}">My Profile</a></li>
         <li><a href="{{ pathFor 'dashboard' }}">Friend List</a></li>
         <li><a href="#">Logout</a></li>
