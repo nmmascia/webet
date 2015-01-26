@@ -86,6 +86,10 @@ body, h1, h2, h3, h4, h5, li, p {
   overflow-y: auto;
 }
 
+.small-icon {
+  font-size: 0.75em;
+}
+
 .square {
   width: 5em;
   height: 5em;
@@ -150,7 +154,6 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .notification-number {
   color: #FCC900;
-  font-weight: 700;
   font-size: 1.5em;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
