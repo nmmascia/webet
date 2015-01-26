@@ -1,5 +1,5 @@
 Template.singleBet.helpers({
-  openStatus: function() {
+  openStatus: function(){
     return ( this.status === "open" ) ? true : false;
   },
 
@@ -7,54 +7,65 @@ Template.singleBet.helpers({
     return ( this.status === "pending" ) ? true : false;
   },
 
+  completedStatus: function(){
+    return ( this.status === "completed" ) ? true : false;
+  },
+
   showEditForm: function(){
     if( Session.get("edit") ){
       return true;
-    }
-    else {
+    } else {
       Session.set("edit", false);
       return false;
     }
   },
-
-  completedStatus: function() {
-    return ( this.status === "completed" ) ? true : false;
-  }
+    showCompleteBetForm: function(){
+      if( Session.get("complete?") ){
+        return true;
+      } else {
+        Session.set("complete?", false);
+        return false;
+      }
+    },
 });
 
 Template.singleBet.events({
   'click .remove_bet_button' : function(){
-    Bets.remove( this._id );
+    Meteor.call("deleteBet", this._id);
+    Router.go('/bets')
   },
 
   'click .accept_button' : function(){
-    Bets.update({ _id: this._id },
-      { $set: { status: "pending" }
-    });
+     Meteor.call("updateStatus", this._id, "pending");
+     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "accepted", this._id);
   },
 
   'click .complete_bet_button' : function(){
-    Bets.update({ _id: this._id },
-      { $set: { status: "completed" }
-    });
+    Session.set("complete?", !Session.get("complete?"))
   },
 
   'click .edit_button' : function(){
     Session.set('edit', !Session.get('edit'));
   },
 
-  'submit .edit-bet' : function(){
+  'submit .select-winner' : function(event){
+    event.preventDefault();
+    var winner =  event.target.children.choose_winner.value;
+
+    Meteor.call("completeBet", this._id, winner );
+    Session.set("complete?", false);
+    Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed", this._id);
+  },
+
+  'submit .edit-bet' : function(event){
+    event.preventDefault();
+
     var title = event.target.betTitle.value,
         wager = event.target.betWager.value,
-        user = Meteor.user(),
-        defender_requested = event.target.defender.value,
-        defender = Meteor.users.findOne({ username: defender_requested });
+        user = Meteor.user().username,
+        defender = event.target.defender.value;
 
-    Bets.update({ _id: this._id }, {
-      bettors: [ user.username, defender.username ],
-      status: "open",
-      title: title,
-      wager: wager
-    });
+    Meteor.call("editBet", this._id, user, defender, title, wager);
+    Session.set('edit', !Session.get('edit'));
   }
 });

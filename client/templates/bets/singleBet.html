@@ -17,5 +17,13 @@
   </div>
   <div id="chat-client">
     {{> messages }}
+
+    {{# if showEditForm }}
+      {{> editBetForm }}
+    {{/ if }}
+
+    {{# if showCompleteBetForm }}
+      {{> completeBetForm }}
+    {{/ if }}
   </div>
 </template>
