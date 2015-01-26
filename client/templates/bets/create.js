@@ -8,7 +8,7 @@ var createBetNotification = function(bet){
   });
 }
 
-  Template.createBetForm.events({
+Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
 
@@ -20,19 +20,19 @@ var createBetNotification = function(bet){
         type = "new";
 
     if (Meteor.users.find({username: defender}).count() === 0){
-
-      throw new Meteor.Error(alert( "Sorry the Username you are trying to challenge is not valid!"))
+      throw new Meteor.Error(
+        alert( "Sorry the Username you are trying to challenge is not valid!" )
+      );
     }
 
     if (defender === username) {
-      throw new Meteor.Error(alert("You can't bet yourself!"))
+      throw new Meteor.Error(
+        alert( "You can't bet yourself!" )
+      );
     }
 
-    Meteor.call("createBet", username, defender, title, wager)
-
-    Meteor.call("createBetNotification", username, defender, type)
-
-    Router.go('/bets')
-
+    Meteor.call("createBet", username, defender, title, wager);
+    Meteor.call("createBetNotification", username, defender, type);
+    Router.go('/bets');
   }
 });

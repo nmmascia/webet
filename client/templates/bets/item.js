@@ -35,10 +35,8 @@ Template.betItem.events({
   },
 
   'click .accept_button' : function(){
-
      Meteor.call("updateStatus", this._id, "pending");
-
-     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "accepted", this._id)
+     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "accepted", this._id);
   },
 
   'click .complete_bet_button' : function(){
@@ -51,10 +49,11 @@ Template.betItem.events({
 
   'submit .select-winner' : function(event){
     event.preventDefault();
-    var winner =  event.target.children.choose_winner.value
-    Meteor.call("completeBet", this._id, winner )
-    Session.set("complete?", false)
-    Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed", this._id)
+    var winner =  event.target.children.choose_winner.value;
+
+    Meteor.call("completeBet", this._id, winner );
+    Session.set("complete?", false);
+    Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed", this._id);
   },
 
   'submit .edit-bet' : function(event){
@@ -66,7 +65,6 @@ Template.betItem.events({
         defender = event.target.defender.value;
 
     Meteor.call("editBet", this._id, user, defender, title, wager);
-
     Session.set('edit', !Session.get('edit'));
   }
 });
