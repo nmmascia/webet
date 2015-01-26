@@ -20,8 +20,8 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .button {
-  background-color: #00C0FF;
-  border-color: #00C0FF;
+  background-color: #1691BA;
+  border-color: #1691BA;
   color: #fff;
 }
 
@@ -49,6 +49,10 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .create-bet {
   margin-top: 2em;
+}
+
+.create-bet h4 {
+  color: #333;
 }
 
 .gray {
