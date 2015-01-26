@@ -149,7 +149,12 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .notification-number {
-  color: red;
+  color: #FCC900;
+  font-weight: 700;
   font-size: 1.5em;
   font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.notification-number:hover {
+  color: #D8AF0D;
 }
