@@ -27,4 +27,8 @@ describe("Template.createBetForm.events", function(){
     expect(Bets.findOne(testBet).status).not.toEqual("completed")
   });
 
+  it(" should have users input text for bet title", function(){
+    expect(Bets.findOne(testBet).title.length).not.toEqual(0)
+  });
+
 });
