@@ -6,12 +6,12 @@
       <h3>Challenger: {{ bettors.[0] }}</h3>
       <h3>Defender: {{ bettors.[1] }}</h3>
       {{# if openStatus }}
-        <button class="accept_button button radius lime small">Accept</button>
-        <button class="edit_button button radius orange small">Edit</button>
-        <button class="remove_bet_button button radius pink small">Remove Bet</button>
+        <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it on!</button>
+        <button class="edit_button button radius orange small"><i class="fa fa-pencil-square-o"> Edit</i></button>
+        <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close</button>
       {{/ if}}
       {{# if pendingStatus }}
-        <button class="complete_bet_button button radius lime small">Complete</button>
+        <button class="complete_bet_button button radius small">Complete</button>
       {{/ if}}
     </div>
   </div>

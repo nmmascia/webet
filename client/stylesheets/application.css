@@ -4,7 +4,16 @@ body {
 
 body, h1, h2, h3, h4, h5, li, p {
   font-family: 'Noto Sans', sans-serif;
-  color: #C6DFF2;
+  color: #333;
+}
+
+.bet {
+  width: 100%;
+  background-color: #5F788B;
+  padding: 0.5em;
+}
+
+.bet-content {
 }
 
 .bets-grid {
@@ -12,7 +21,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .bet-title {
-  color: #F4FA1C;
+  color: #fff;
 }
 
 .blue {
@@ -23,6 +32,12 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #1691BA;
   border-color: #1691BA;
   color: #fff;
+}
+
+.button.green {
+  background-color: #86CA3C;
+  border-color: #86CA3C;
+  color: #FFF;
 }
 
 .button.lime {
@@ -37,9 +52,9 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #FFF;
 }
 
-.button.pink{
-  background-color: #FF0061;
-  border-color: #FF0061;
+.button.red{
+  background-color: #EC3F3F;
+  border-color: #EC3F3F;
   color: #fff;
 }
 
@@ -135,6 +150,10 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-top: 1em;
 }
 
+.teal {
+  color: #74DBF4;
+}
+
 .username {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -168,4 +187,19 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .notification-number:hover {
   color: #D8AF0D;
+}
+
+.accept_button {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.edit_button {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.remove_bet_button {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
 }
