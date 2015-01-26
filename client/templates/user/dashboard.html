@@ -1,11 +1,11 @@
 <template name="dashboard">
   <div class="small-12 columns">
-    <div class="notifications-count">
-      <p>You have <span class="bet-notification">{{ notificationsCount }}</span> new bets!</p>
-    </div>
     <div class="dash-body">
-      <h1 class="username text-center">{{ currentUser.username }}</h1>
-      <ul class="small-block-grid-3 text-center">
+      <div class="notifications-count">
+        <p>You have <span class="bet-notification">{{ notificationsCount }}</span> new bets!</p>
+      </div>
+      <span class="username text-center">{{ currentUser.username }}</span>
+      <ul class="bets-grid small-block-grid-3 text-center">
         <li><button class="square open"><h2>1</h2></button></li>
         <li><button class="square pending"><h2>5</h2></button></li>
         <li><button class="square completed"><h2>99+</h2></button></li>

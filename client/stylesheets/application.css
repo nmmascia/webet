@@ -7,6 +7,10 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #C6DFF2;
 }
 
+.bets-grid {
+  margin-top: 1em;
+}
+
 .bet-title {
   color: #F4FA1C;
 }
@@ -112,7 +116,10 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .username {
-
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  letter-spacing: 1.5px;
 }
 
 .win-stats {
