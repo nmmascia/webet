@@ -7,4 +7,8 @@ describe("Template.messages", function(){
     testMessage = Messages.insert({message: "Looks like you going to losing this one", sentBy: "nick", bet: "gAeAgX8wbSpiic2mm"});
    });
 
+   it("should show a message with text that user inputs", function(){
+     expect(Messages.findOne(testMessage).message).toEqual("Looks like you going to losing this one")
+   });
+
 });
