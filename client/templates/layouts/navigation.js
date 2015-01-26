@@ -1,3 +1,11 @@
+Template.navigation.helpers({
+  notificationsCount: function(){
+    return betNotifications.find({
+      toNotify: Meteor.user().username
+    }).count();
+  }
+});
+
 Template.navigation.events({
   "click .open-button" : function(){
     Session.set( "user", Meteor.user().username );

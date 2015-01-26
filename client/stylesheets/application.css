@@ -132,3 +132,14 @@ body, h1, h2, h3, h4, h5, li, p {
 .welcome {
   margin-top: 35%;
 }
+
+.notification-count {
+  text-align: center;
+  vertical-align: center;
+  position: relative;
+}
+.notification-number {
+  color: red;
+  font-size: 1.5em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
