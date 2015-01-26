@@ -3,7 +3,7 @@ Template.singleBet.helpers({
     return ( this.status === "open" ) ? true : false;
   },
 
-  pendingStatus: function() {
+  pendingStatus: function(){
     return ( this.status === "pending" ) ? true : false;
   },
 
@@ -12,7 +12,7 @@ Template.singleBet.helpers({
       return true;
     }
     else {
-      Session.set("edit", false)
+      Session.set("edit", false);
       return false;
     }
   },

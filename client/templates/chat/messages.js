@@ -17,9 +17,7 @@ Template.entry.events({
           bet = this._id;
 
     Meteor.call("createMessage", message, user, bet);
-
     Meteor.call("createBetNotification", user, defender, type, bet);
-
     event.target.message.value = '';
   }
 });
