@@ -1,4 +1,4 @@
-Template.betsList.events({
+Template.navigation.events({
   "click .open-button" : function(){
     Session.set( "user", Meteor.user().username );
     Session.set( "status", "open" );
