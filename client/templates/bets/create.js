@@ -1,6 +1,6 @@
 Template.createBetForm.helpers({
-  photo: function(){
-    return Session.get("photo");
+  image: function(){
+    return Session.get("image");
   }
 })
 
@@ -13,7 +13,7 @@ Template.createBetForm.events({
         user = Meteor.user(),
         username = user.username,
         defender = event.target.defender.value,
-        betImage = Session.get('image._id'),
+        betImage = Session.get('image_id'),
         type = 'new';
 
     if (Meteor.users.find({username: defender}).count() === 0){
@@ -44,7 +44,7 @@ Template.createBetForm.events({
     MeteorCamera.getPicture(cameraOptions, function(error, data){
       var image = Images.insert(data);
       Session.set('image', data);
-      Session.set('image._id', image._id);
+      Session.set('image_id', image._id);
     });
   }
 });
