@@ -16,22 +16,22 @@
 
   <aside class="left-off-canvas-menu">
     <ul class="off-canvas-list">
-      {{#if currentUser}}
+      {{# if currentUser }}
         <li><label>Get Started</label></li>
         <li><a href="/bet">Create a Bet</a></li>
         <li><label>View Bets</label></li>
         <li><a href="/bet">New Bets</a></li>
         <li><a href="/bet">Bets in Progress</a></li>
         <li><a href="/bet">Completed Bets</a></li>
-        <li><label>{{currentUser.username}}</label></li>
+        <li><label>{{ currentUser.username }}</label></li>
         <li><a href="{{ pathFor 'dashboard' }}">My Profile</a></li>
         <li><a href="{{ pathFor 'dashboard' }}">Friend List</a></li>
         <li><a href="#">Logout</a></li>
-      {{else}}
+      {{ else }}
         <li><label>Welcome</label></li>
         <li><a href="#">Sign up</a></li>
         <li><a href="#">Login</a></li>
-      {{/if}}
+      {{/ if }}
     </ul>
   </aside>
 

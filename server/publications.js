@@ -9,3 +9,7 @@ Meteor.publish('betNotifications', function(){
 Meteor.publish('messages', function(){
   return Messages.find();
 });
+
+Meteor.publish('allUsernames', function(username){
+  return Meteor.users.find();
+});
