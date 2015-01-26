@@ -11,5 +11,5 @@ accounts-facebook
 multiply:iron-router-progress
 sacha:spin
 mdg:camera
-cfs:gridfs
 cfs:standard-packages
+cfs:gridfs
