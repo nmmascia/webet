@@ -1,12 +1,11 @@
 <template name="createBetForm">
   <div id="photo-container">
-    {{# unless getPhoto }}
-      <button class="take-photo">Add Photo</button>
-    {{ else }}
-      <div class="photo-view">
-        <img src={{ photo }}>
+    {{#if photo}}
+      <div>
+        <img src={{photo}} />
       </div>
-    {{/ unless }}
+    {{/if}}
+    <button class="take-photo">Add Photo</button>
   </div>
   <form class="create-bet">
     <h4 class="text-center">Your bet?</h4>
