@@ -52,5 +52,5 @@ Meteor.methods({
       sentBy: sender,
       bet: bet_id
     });
-  },
+  }
 });
