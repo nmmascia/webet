@@ -1,13 +1,3 @@
-var createBetNotification = function(bet){
-  var bet = Bets.findOne({ _id: bet });
-
-  BetNotifications.insert({
-    toNotify: bet.bettors[1],
-    betBy: bet.bettors[0],
-    bet: bet._id
-  });
-}
-
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
