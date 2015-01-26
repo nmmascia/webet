@@ -43,6 +43,10 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #4EB3FF;
 }
 
+.logo {
+  font-family: 'Lobster', cursive;
+}
+
 .logo-text {
   font-size: 3.5em;
   font-family: 'Lobster', cursive;
@@ -51,6 +55,14 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .long {
   padding: 1em 4em !important;
+}
+
+.lose-stats {
+  height: 5em;
+  border-radius: 5px;
+  background-color: #4A6FFF;
+  margin-bottom: 1.5em;
+  font-size: 1em;
 }
 
 .off-canvas-wrap, .inner-wrap {
@@ -88,12 +100,26 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #E56F27;
 }
 
+.stats {
+  padding: 0.5em 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
 .submit-button {
   margin-top: 1em;
 }
 
 .username {
 
+}
+
+.win-stats {
+  height: 5em;
+  border-radius: 5px;
+  background-color: #25E888;
+  margin-bottom: 1.5em;
 }
 
 .welcome {
