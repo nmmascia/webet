@@ -1,3 +1,9 @@
+Template.createBetForm.helpers({
+  photo: function(){
+    return Session.get("photo");
+  }
+})
+
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
