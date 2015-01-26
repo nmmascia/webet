@@ -1,10 +1,11 @@
 Meteor.methods({
-  createBet: function(user,defender,title,wager) {
+  createBet: function(user, defender, title, wager, image_id) {
     Bets.insert({
       bettors: [ user, defender ],
       status: "open",
       title: title,
       wager: wager,
+      image_id: image_id,
       createdAt: new Date()
     });
   },
