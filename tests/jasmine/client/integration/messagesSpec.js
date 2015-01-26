@@ -11,4 +11,8 @@ describe("Template.messages", function(){
      expect(Messages.findOne(testMessage).message).toEqual("Looks like you going to losing this one")
    });
 
+   it("tells who the sender is", function(){
+     expect(Messages.findOne(testMessage).sentBy).toEqual("nick")
+   });
+
 });
