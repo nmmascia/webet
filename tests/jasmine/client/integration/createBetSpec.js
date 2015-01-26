@@ -15,4 +15,8 @@ describe("Template.createBetForm.events", function(){
     expect(Bets.findOne(testBet).wager).toEqual("a beach ball in a bag")
   });
 
+  it("creates bet that start off with an open status", function(){
+    expect(Bets.findOne(testBet).status).toEqual("open")
+  });
+
 });
