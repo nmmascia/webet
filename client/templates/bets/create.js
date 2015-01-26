@@ -24,5 +24,22 @@ Template.createBetForm.events({
     Meteor.call("createBet", username, defender, title, wager);
     Meteor.call("createBetNotification", username, defender, type);
     Router.go('/bets');
+  },
+
+  "click .take-photo" : function(event){
+    event.preventDefault();
+
+    var cameraOptions = {
+      width: 800,
+      height: 600
+    };
+
+    MeteorCamera.getPicture(cameraOptions, function(error, data){
+      Session.set("photo", data);
+    });
+  },
+
+  getPhoto: function(){
+    Session.get("photo");
   }
 });
