@@ -27,8 +27,8 @@ Template.createBetForm.events({
       );
     }
 
-    Meteor.call("createBet", username, defender, title, wager);
-    Meteor.call("createBetNotification", username, defender, type);
+    Meteor.call('createBet', username, defender, title, wager, betImage);
+    Meteor.call('createBetNotification', username, defender, type);
     Router.go('/bets');
   },
 
@@ -41,8 +41,9 @@ Template.createBetForm.events({
     };
 
     MeteorCamera.getPicture(cameraOptions, function(error, data){
-      Images.insert(data);
-      Session.set("photo", data);
+      var image = Images.insert(data);
+      Session.set('image', data);
+      Session.set('image._id', image._id);
     });
   }
 });
