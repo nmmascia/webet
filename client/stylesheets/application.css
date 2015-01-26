@@ -1,5 +1,5 @@
 body {
-  background-color: #FDFEFF;
+  background-color: #ECECEC;
 }
 
 body, h1, h2, h3, h4, h5, li, p {
@@ -113,7 +113,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .square.open {
-  background-color: #FCC900;
+  background-color: #F4AE17;
 }
 
 .square.pending {
@@ -142,7 +142,7 @@ body, h1, h2, h3, h4, h5, li, p {
 .win-stats {
   height: 5em;
   border-radius: 5px;
-  background-color: #0EB2ED;
+  background-color: #1F86AB;
   margin-bottom: 1.5em;
 }
 
