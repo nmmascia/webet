@@ -19,4 +19,8 @@ describe("Template.createBetForm.events", function(){
     expect(Bets.findOne(testBet).status).toEqual("open")
   });
 
+  it("should not have newly created bets with pending status ", function(){
+    expect(Bets.findOne(testBet).status).not.toEqual("pending")
+  });
+
 });
