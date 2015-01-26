@@ -31,4 +31,8 @@ describe("Template.createBetForm.events", function(){
     expect(Bets.findOne(testBet).title.length).not.toEqual(0)
   });
 
+  it("should have users input text for a created bet wager", function(){
+    expect(Bets.findOne(testBet).wager.length).not.toEqual(0)
+  });
+
 });
