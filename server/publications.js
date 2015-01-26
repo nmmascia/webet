@@ -16,4 +16,9 @@ Meteor.publish('allUsernames', function(){
 
 Meteor.publish('images', function(){
   return Images.find();
+
+});
+
+Meteor.publish("friendsList", function() {
+  return Friends.find({ user: this.id });
 });
