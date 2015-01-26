@@ -6,8 +6,9 @@
     <input type="submit" value="Find Friends">
   </form>
 
-  {{# each friends }}
-    <li>{{> friend }}</li><br>
+  {{#each friends }}
+    <li><a href="{{ pathFor 'friends' }}">{{ friend }}</a></li>
+    <button>Challenge</button>
   {{/ each }}
 
 </template>
