@@ -32,7 +32,7 @@ Template.createBetForm.events({
         defender_id = Meteor.users.find({username: defender}).fetch()[0]._id
         console.log(defender_id)
         betImage = Session.get('image_id'),
-        type = 'new';
+        type = 'bet';
 
     checkForUserAsDefender({ username: username, defender: defender });
     checkForDefender(defender);
