@@ -13,7 +13,12 @@ var getDefenderByUsername = function(defender){
   } else {
     return defender;
   }
-}
+};
+
+var isFriend = function(user, defender){
+  var friendship = Friends.findOne({ user: user, friend: defender });
+  return (!friendship) ? true : false;
+};
 
 Template.createBetForm.helpers({
   image: function(){
