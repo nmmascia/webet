@@ -19,7 +19,7 @@ Meteor.publish('images', function(){
 
 });
 
-Meteor.publish("friendsList", function(user_id) {
-  return Friends.find({user: user_id});
+Meteor.publish("friendsList", function() {
+  return Friends.find();
 });
 
