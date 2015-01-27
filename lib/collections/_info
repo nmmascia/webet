@@ -1,0 +1,38 @@
+users Collection has
+
+  if vanilla signup
+    _id: ""
+    username: ""
+
+  if fb signup
+    _id: ""
+    profile: {
+      name: ""
+    }
+
+bets Collection has
+  _id: ""
+  bettors: [
+    challenger_id: ""
+    defender_id: ""
+  ]
+  status: "" { defaults as "open" }
+  title: ""
+  wager: ""
+
+  if picture taken
+    image_id: ""
+
+images Collection
+  collection of FS.File objects
+
+  in view
+    can use FS.GetFile images image_id
+  to return image
+
+notifications Collection
+  _id: ""
+  betBy: ""
+  bet_id: ""
+  toNotify: ""
+  type: "" { defaults as "new" }
