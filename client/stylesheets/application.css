@@ -89,6 +89,14 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-bottom: 0;
 }
 
+#chat-entry {
+  padding: 1em 0;
+}
+
+.chat-textarea {
+  width: 100%;
+}
+
 .chat-username {
   color: #086AEC;
 }
@@ -160,6 +168,13 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .red {
   color: #EC3F3F;
+}
+
+.send-button {
+  color: #fff;
+  margin: 1em 0;
+  padding-top: 0.8em !important;
+  padding-bottom: 0.8em !important;
 }
 
 .small-icon {
