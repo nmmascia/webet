@@ -29,6 +29,8 @@ Template.createBetForm.events({
         user = Meteor.user(),
         username = user.username,
         defender = event.target.defender.value,
+        defender_id = Meteor.users.find({username: defender}).fetch()[0]._id
+        console.log(defender_id)
         betImage = Session.get('image_id'),
         type = 'new';
 
@@ -44,8 +46,7 @@ Template.createBetForm.events({
       Meteor.call("addFriend", user._id, defender);
     }
 
-
-    Router.go('/bets');
+    Router.go('/dashboard');
   },
 
   "click .take-photo" : function(event){
