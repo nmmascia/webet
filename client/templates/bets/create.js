@@ -23,16 +23,14 @@ Template.createBetForm.helpers({
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
-
-    var title = event.target.betTitle.value,
-        wager = event.target.betWager.value,
-        user = Meteor.user(),
-        username = user.username,
-        defender = event.target.defender.value,
-        defender_id = Meteor.users.find({username: defender}).fetch()[0]._id
-        console.log(defender_id)
-        betImage = Session.get('image_id'),
-        type = 'bet';
+    var bet = {}
+    bet.title = event.target.betTitle.value;
+    bet.wager = event.target.betWager.value;
+    bet.user = Meteor.user();
+    bet.defender = event.target.defender.value;
+    bet.defender_id = Meteor.users.find({username: defender}).fetch()[0]._id;
+    bet.image = Session.get('image_id');
+    bet.type = 'bet';
 
     checkForUserAsDefender({ username: username, defender: defender });
     checkForDefender(defender);
