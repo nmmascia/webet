@@ -55,9 +55,9 @@ Meteor.methods({
   },
 
   addFriend: function(user_id, friendsName) {
-    Friends.update({
-      user: user_id},
-      {friend: friendsName
-    }, {upsert:true});
+    Friends.insert({
+      user: user_id,
+      friend: friendsName
+    });
   }
 });
