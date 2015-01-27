@@ -1,3 +1,19 @@
+var checkForDefender = function(defender){
+  if (Meteor.users.find({username: defender}).count() === 0){
+    throw new Meteor.Error(
+      alert( "Sorry the Username you are trying to challenge is not valid!" )
+    );
+  }
+};
+
+var checkForUserAsDefender = function(options){
+  if (options.defender === options.username) {
+    throw new Meteor.Error(
+      alert( "You can't bet yourself!" )
+    );
+  }
+}
+
 Template.createBetForm.helpers({
   image: function(){
     return Session.get("image");
@@ -16,17 +32,8 @@ Template.createBetForm.events({
         betImage = Session.get('image_id'),
         type = 'new';
 
-    if (Meteor.users.find({username: defender}).count() === 0){
-      throw new Meteor.Error(
-        alert( "Sorry the Username you are trying to challenge is not valid!" )
-      );
-    }
-
-    if (defender === username) {
-      throw new Meteor.Error(
-        alert( "You can't bet yourself!" )
-      );
-    }
+    checkForUserAsDefender({ username: username, defender: defender });
+    checkForDefender(defender);
 
     Meteor.call('createBet', username, defender, title, wager, betImage);
     Meteor.call('createBetNotification', username, defender, type);
