@@ -32,9 +32,7 @@ Template.createBetForm.events({
     bet.image = Session.get('image_id');
     bet.type = 'bet';
 
-    checkForUserAsDefender({ username: username, defender: defender });
-    checkForDefender(defender);
-
+    checkForUserAsDefender( bet );
     Meteor.call('createBet', username, defender, title, wager, betImage);
     Meteor.call('createBetNotification', username, defender, type);
 
