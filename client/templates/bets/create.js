@@ -41,10 +41,9 @@ Template.createBetForm.events({
     Meteor.call('createBet', bet);
     Meteor.call('createBetNotification', username, defender, type);
 
-    if (Friends.find({ $and: [ { user: user._id }, { friend: defender }  ]}).count() === 0) {
-
-      Meteor.call("addFriend", defender_id, username);
-      Meteor.call("addFriend", user._id, defender);
+    if( isFriend(bet.user._id, bet.defender.username) ) {
+      Meteor.call("addFriend", bet.user._id, bet.defender.username);
+      Meteor.call("addFriend", bet.defender._id, bet.user._id);
     }
 
     Router.go('/dashboard');
@@ -65,6 +64,4 @@ Template.createBetForm.events({
       Session.set('image_id', image._id);
     });
   }
-});    if( isFriend(bet.user._id, defender.username) ) {
-      Meteor.call("addFriend", bet);
-      Meteor.call("addFriend", bet);
+});
