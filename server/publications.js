@@ -23,3 +23,7 @@ Meteor.publish("friendsList", function() {
   return Friends.find();
 });
 
+ Meteor.publish("myFriends", function(userId) {
+  return Friends.find({ user: userId })
+ })
+
