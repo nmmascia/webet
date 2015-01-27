@@ -12,6 +12,10 @@ var checkForUserAsDefender = function(options){
       alert( "You can't bet yourself!" )
     );
   }
+};
+
+var getDefenderByUsername = function(defender){
+  return Meteor.users.findOne({ username: defender });
 }
 
 Template.createBetForm.helpers({
