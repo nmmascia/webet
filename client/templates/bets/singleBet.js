@@ -19,14 +19,15 @@ Template.singleBet.helpers({
       return false;
     }
   },
-    showCompleteBetForm: function(){
-      if( Session.get("complete?") ){
-        return true;
-      } else {
-        Session.set("complete?", false);
-        return false;
-      }
-    },
+
+  showCompleteBetForm: function(){
+    if( Session.get("complete?") ){
+      return true;
+    } else {
+      Session.set("complete?", false);
+      return false;
+    }
+  }
 });
 
 Template.singleBet.events({

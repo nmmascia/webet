@@ -10,3 +10,8 @@ accounts-ui
 accounts-facebook
 multiply:iron-router-progress
 sacha:spin
+mdg:camera
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem
+cfs:ui
