@@ -105,6 +105,7 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-bottom: 1em;
   background-color: #B8B8B8;
   border-radius: 3px;
+  overflow: hidden
 }
 
 .complete_bet_button {
@@ -173,6 +174,8 @@ body, h1, h2, h3, h4, h5, li, p {
 .send-button {
   color: #fff;
   margin: 1em 0;
+  float: right;
+  margin-right: 0.5em;
   padding-top: 0.8em !important;
   padding-bottom: 0.8em !important;
 }
