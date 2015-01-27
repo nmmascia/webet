@@ -78,10 +78,10 @@ Meteor.methods({
     });
   },
 
-  incrementPoints: function(scoreValue, user) {
+  incrementPoints: function( user, scoreValue) {
     Points.update(
-    { $inc: {score: 5}},
-      {wonBy: user}
+      {wonBy: user},
+      { $inc: {score: 5}
     });
   }
 });
