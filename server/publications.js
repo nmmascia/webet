@@ -33,3 +33,6 @@ Meteor.publish("friendsList", function() {
   return Friends.find({ user: userId })
  })
 
+Meteor.publish('points', function(){
+  return Points.find();
+});
