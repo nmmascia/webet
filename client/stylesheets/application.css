@@ -43,6 +43,7 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #1691BA;
   border-color: #1691BA;
   color: #fff;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .button.green {
@@ -67,6 +68,10 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #EC3F3F;
   border-color: #EC3F3F;
   color: #fff;
+}
+
+#chat-client {
+  background-color: #B8B8B8;
 }
 
 .complete_bet_button {
@@ -177,7 +182,7 @@ body, h1, h2, h3, h4, h5, li, p {
   padding: 0.1em 0.5em;
 }
 
-.status-bar h3 {
+.status-bar h4 {
   color: #fff;
 }
 

@@ -7,15 +7,26 @@
     </div>
     <div class="bet-content">
       {{# if openStatus }}
-        <div class="status-bar open"><h3>Status: {{ status }}</h3></div>
+        <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
+        <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it!</button>
+        <button class="edit_button button radius green small"><i class="fa fa-pencil-square-o"> Edit</i></button>
+        <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close Bet</button>
       {{/ if}}
       {{# if pendingStatus }}
-        <div class="status-bar pending"><h3>Status: {{ status }}</h3></div>
+        <div class="status-bar pending"><h4 class="text-center">Status: {{ status }}</h4></div>
+        <button class="complete_bet_button button radius expand">Complete</button>
       {{/ if}}
       {{# if completedStatus }}
-        <div class="status-bar completed"><h3>Status: {{ status }}</h3></div>
+        <div class="status-bar completed"><h4 class="text-center">Status: {{ status }}</h4></div>
       {{/ if}}
       <div class="bet-bg">
+        {{# if showEditForm }}
+          {{> editBetForm }}
+        {{/ if }}
+
+        {{# if showCompleteBetForm }}
+          {{> completeBetForm }}
+        {{/ if }}
         <div class="title-bar"><h3>The Bet</h3></div>
         <h3 class="bet-bg-content">{{ title }}</h3>
         <div class="title-bar"><h3>The Stakes</h3></div>
@@ -24,25 +35,9 @@
         <h3 class="bet-bg-content red">Challenger: {{ bettors.[0] }}</h3>
         <h3 class="bet-bg-content dark-blue">Defender: {{ bettors.[1] }}</h3>
       </div>
-      {{# if openStatus }}
-        <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it on!</button>
-        <button class="edit_button button radius orange small"><i class="fa fa-pencil-square-o"> Edit</i></button>
-        <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close</button>
-      {{/ if}}
-      {{# if pendingStatus }}
-        <button class="complete_bet_button button radius small expand">Complete</button>
-      {{/ if}}
     </div>
-  </div>
-  <div id="chat-client">
-    {{> messages }}
-
-    {{# if showEditForm }}
-      {{> editBetForm }}
-    {{/ if }}
-
-    {{# if showCompleteBetForm }}
-      {{> completeBetForm }}
-    {{/ if }}
+    <div id="chat-client">
+      {{> messages }}
+    </div>
   </div>
 </template>
