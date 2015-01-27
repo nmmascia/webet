@@ -70,8 +70,21 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #fff;
 }
 
+.chat-bar {
+  background-color: #777777;
+}
+
+.chat-bar h3 {
+  color: #fff;
+}
+
+.chat-username {
+  color: blue;
+}
+
 #chat-client {
   background-color: #B8B8B8;
+  border-radius: 3px;
 }
 
 .complete_bet_button {
