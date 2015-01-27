@@ -70,4 +70,11 @@ Meteor.methods({
       toNotify: username
     });
   }
+
+  createPoints: function(score, user){
+    Points.insert({
+      score: 0,
+      wonBy: user,
+    });
+  }
 });
