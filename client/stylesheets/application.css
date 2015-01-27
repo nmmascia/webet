@@ -80,6 +80,15 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #fff;
 }
 
+#chat-box {
+  padding: 0 0.1em;
+}
+
+.chatbox-line {
+  word-wrap: break-word;
+  margin-bottom: 0;
+}
+
 .chat-username {
   color: #086AEC;
 }
