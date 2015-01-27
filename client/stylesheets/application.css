@@ -16,6 +16,7 @@ body, h1, h2, h3, h4, h5, li, p {
 .bet-bg {
   background-color: #DCE0E0;
   border-radius: 3px;
+  margin-bottom: 1em;
 }
 
 .bet-bg-content {
@@ -69,7 +70,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .complete_bet_button {
-  margin: 1em 0;
+  margin-bottom: 1em;
 }
 
 .crazy-yellow {
