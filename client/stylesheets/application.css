@@ -10,7 +10,7 @@ body, h1, h2, h3, h4, h5, li, p {
 .bet {
   width: 100%;
   background-color: #5F788B;
-  padding: 0.5em;
+  padding: 1em 0.5em;
 }
 
 .bet-content {
