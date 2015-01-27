@@ -1,6 +1,7 @@
 <template name="dashboard">
   <div class="small-12 columns">
     <div class="dash-body">
+      <img src={{ currentUser.profile.picture }}>
       <span class="username text-center">{{ currentUser.username }}</span>
       <ul class="bets-grid small-block-grid-3 text-center">
         <li><a href="/bets" class="button square open"><h2>{{openBets.count}} <i class="small-icon fa fa-exclamation-circle"></i></h2></a></li>
