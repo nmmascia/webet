@@ -69,12 +69,21 @@ Meteor.methods({
     BetNotifications.remove({
       toNotify: username
     });
-  }
+  },
 
-  createPoints: function(score, user){
+  createPoints: function(score, user) {
     Points.insert({
       score: 0,
-      wonBy: user,
+      wonBy: user
     });
-  }
+  }, 
+
+  incrementPoints: function(scoreValue, user) {
+    Points.update(
+    { $inc: {score: 5}},
+      {wonBy: user}
+    });
+  }, 
+   
+
 });
