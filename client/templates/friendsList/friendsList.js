@@ -3,3 +3,9 @@ Template.friendsList.helpers({
     return Friends.find();
   }
 });
+
+Template.friendslist.event({
+  'click .challenge_button': function() {
+
+  }
+})
