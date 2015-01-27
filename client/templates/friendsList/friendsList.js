@@ -5,7 +5,7 @@ Template.friendsList.helpers({
 });
 
 Template.friendslist.event({
-  'click .challenge_button': function() {
+  'click .challenge_button': function(event) {
 
   }
 })
