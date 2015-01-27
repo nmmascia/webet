@@ -14,12 +14,14 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .bet-bg {
-  background-color: #DCE0E0;
-  border-radius: 3px;
+  background-color: #D0D0D0;
+  margin-bottom: 1em;
 }
 
 .bet-bg-content {
-  margin-left: 0.3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .bet-image img {
@@ -42,6 +44,7 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #1691BA;
   border-color: #1691BA;
   color: #fff;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .button.green {
@@ -66,6 +69,44 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #EC3F3F;
   border-color: #EC3F3F;
   color: #fff;
+}
+
+.chat-bar {
+  background-color: #000000;
+}
+
+.chat-bar h4 {
+  color: #fff;
+}
+
+#chat-box {
+  padding: 0 0.1em;
+}
+
+.chatbox-line {
+  word-wrap: break-word;
+  margin-bottom: 0;
+}
+
+#chat-entry {
+  padding: 1em 0;
+}
+
+.chat-textarea {
+  width: 100%;
+}
+
+.chat-username {
+  color: #086AEC;
+}
+
+#chat-client {
+  margin-bottom: 1em;
+  background-color: #F5F5F5;
+}
+
+.complete_bet_button {
+  margin-bottom: 1em;
 }
 
 .crazy-yellow {
@@ -127,6 +168,15 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #EC3F3F;
 }
 
+.send-button {
+  color: #fff;
+  margin: 1em 0;
+  float: right;
+  margin-right: 0.5em;
+  padding-top: 0.8em !important;
+  padding-bottom: 0.8em !important;
+}
+
 .small-icon {
   font-size: 0.75em;
 }
@@ -167,12 +217,11 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .status-bar {
-  border-radius: 3px;
   margin: 0.5em 0;
   padding: 0.1em 0.5em;
 }
 
-.status-bar h3 {
+.status-bar h4 {
   color: #fff;
 }
 
@@ -197,7 +246,7 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-left: 0.5em;
 }
 
-.title-bar h3 {
+.title-bar h4 {
   color: #fff;
 }
 
