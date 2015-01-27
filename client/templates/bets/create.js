@@ -31,8 +31,7 @@ Template.createBetForm.events({
     bet.title = event.target.betTitle.value;
     bet.wager = event.target.betWager.value;
     bet.user = Meteor.user();
-    bet.defender = event.target.defender.value;
-    bet.defender_id = Meteor.users.find({username: defender}).fetch()[0]._id;
+    bet.defender = getDefenderByUsername( event.target.defender.value );
     bet.image = Session.get('image_id');
     bet.type = 'bet';
 
