@@ -45,7 +45,8 @@ Template.createBetForm.events({
 
     var cameraOptions = {
       width: 700,
-      height: 500
+      height: 500,
+      quality: 100
     };
 
     MeteorCamera.getPicture(cameraOptions, function(error, data){
