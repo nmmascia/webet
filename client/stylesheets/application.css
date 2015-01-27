@@ -13,7 +13,13 @@ body, h1, h2, h3, h4, h5, li, p {
   padding: 1em 0.5em;
 }
 
-.bet-content {
+.bet-bg {
+  background-color: #DCE0E0;
+  border-radius: 3px;
+}
+
+.bet-bg-content {
+  margin-left: 0.3em;
 }
 
 .bet-image img {
@@ -74,6 +80,10 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #333;
 }
 
+.dark-blue {
+  color: #086AEC;
+}
+
 .gray {
   color: #646F81;
 }
@@ -111,6 +121,10 @@ body, h1, h2, h3, h4, h5, li, p {
 .off-canvas-wrap {
   height: 100%;
   overflow-y: auto;
+}
+
+.red {
+  color: #EC3F3F;
 }
 
 .small-icon {
@@ -180,8 +194,11 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .title-bar {
   background-color: #333;
-  border-radius: 3px;
   padding-left: 0.5em;
+}
+
+.title-bar h3 {
+  color: #fff;
 }
 
 .teal {
