@@ -1,5 +1,5 @@
 var checkForUserAsDefender = function(options){
-  if (options.defender === options.username) {
+  if( options.defender._id === options.username._id ){
     throw new Meteor.Error(
       alert( "You can't bet yourself!" )
     );
