@@ -20,7 +20,7 @@ Template._bets.helpers({
 });
 
 Template.dashboard.rendered =function() {
-    Session.set("userObject", this.data)  };
+    Session.set("userObject", this.data.username)  };
 
 Template._bets.events({
   "click .open" : function(){
