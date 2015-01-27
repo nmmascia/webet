@@ -29,7 +29,6 @@ Template.createBetForm.events({
         user = Meteor.user(),
         username = user.username,
         defender = event.target.defender.value,
-
         betImage = Session.get('image_id'),
         type = 'new';
 
@@ -39,33 +38,13 @@ Template.createBetForm.events({
     Meteor.call('createBet', username, defender, title, wager, betImage);
     Meteor.call('createBetNotification', username, defender, type);
 
-        type = "new";
-
-    if (defender === username) {
-      throw new Meteor.Error(
-        alert( "You can't bet yourself!" )
-      );
-    }
-
-    if (Meteor.users.find({username: defender}).count() === 0){
-      throw new Meteor.Error(
-        alert( "Sorry the Username you are trying to challenge is not valid!" )
-      );
-    }
-
-    defender_id = Meteor.users.find({username: defender}).fetch()[0]._id
-
-    console.log(defender_id)
-
-
-    Meteor.call("createBet", username, defender, title, wager);
-    Meteor.call("createBetNotification", username, defender, type);
-
     if (Friends.find({ $and: [ { user: user._id }, { friend: defender }  ]}).count() === 0) {
 
       Meteor.call("addFriend", defender_id, username);
       Meteor.call("addFriend", user._id, defender);
     }
+
+
     Router.go('/bets');
   },
 
