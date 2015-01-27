@@ -1,11 +1,3 @@
-var checkForDefender = function(defender){
-  if (Meteor.users.find({username: defender}).count() === 0){
-    throw new Meteor.Error(
-      alert( "Sorry the Username you are trying to challenge is not valid!" )
-    );
-  }
-};
-
 var checkForUserAsDefender = function(options){
   if (options.defender === options.username) {
     throw new Meteor.Error(
@@ -15,7 +7,12 @@ var checkForUserAsDefender = function(options){
 };
 
 var getDefenderByUsername = function(defender){
-  return Meteor.users.findOne({ username: defender });
+  var defender = Meteor.users.findOne({ username: defender });
+  if( !defender ){
+    throw new Meteor.Error( alert("Invalid User") );
+  } else {
+    return defender;
+  }
 }
 
 Template.createBetForm.helpers({
