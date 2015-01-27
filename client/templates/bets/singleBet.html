@@ -8,9 +8,11 @@
     <div class="bet-content">
       {{# if openStatus }}
         <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
-        <button class="accept_button button small"><i class="fa fa-check-square-o"></i> Bring it!</button>
-        <button class="edit_button button green small"><i class="fa fa-pencil-square-o"> Edit</i></button>
-        <button class="remove_bet_button button red small"><i class="fa fa-ban"></i> Close Bet</button>
+        <button class="accept_button button small expand"><i class="fa fa-check-square-o"></i> Bring it!</button>
+        <div class="small-10 small-centered columns text-center">
+          <button class="edit_button button green small radius"><i class="fa fa-pencil-square-o"></i> Edit Bet</button>
+          <button class="remove_bet_button button red small radius"><i class="fa fa-ban"></i> Close Bet</button>
+        </div>
       {{/ if}}
       {{# if pendingStatus }}
         <div class="status-bar pending"><h4 class="text-center">Status: {{ status }}</h4></div>
