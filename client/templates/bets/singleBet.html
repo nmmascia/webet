@@ -1,5 +1,5 @@
 <template name="singleBet">
-  <div class="singlebet small-12 columns">
+  <div class="singlebet">
     <div class="bet-image">
       {{# with FS.GetFile 'images' image_id}}
         <img src="{{ this.url store='images' }}">
@@ -8,13 +8,13 @@
     <div class="bet-content">
       {{# if openStatus }}
         <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
-        <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it!</button>
-        <button class="edit_button button radius green small"><i class="fa fa-pencil-square-o"> Edit</i></button>
-        <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close Bet</button>
+        <button class="accept_button button small"><i class="fa fa-check-square-o"></i> Bring it!</button>
+        <button class="edit_button button green small"><i class="fa fa-pencil-square-o"> Edit</i></button>
+        <button class="remove_bet_button button red small"><i class="fa fa-ban"></i> Close Bet</button>
       {{/ if}}
       {{# if pendingStatus }}
         <div class="status-bar pending"><h4 class="text-center">Status: {{ status }}</h4></div>
-        <button class="complete_bet_button button radius expand">Complete</button>
+        <button class="complete_bet_button button expand">Complete</button>
       {{/ if}}
       {{# if completedStatus }}
         <div class="status-bar completed"><h4 class="text-center">Status: {{ status }}</h4></div>
