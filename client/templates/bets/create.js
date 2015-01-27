@@ -29,11 +29,11 @@ Template.createBetForm.events({
     bet.wager = event.target.betWager.value;
     bet.user = Meteor.user();
     bet.defender = getDefenderByUsername( event.target.defender.value );
-    bet.image = Session.get('image_id');
+    bet.image_id = Session.get('image_id');
     bet.type = 'bet';
 
     checkForUserAsDefender( bet );
-    Meteor.call('createBet', username, defender, title, wager, betImage);
+    Meteor.call('createBet', bet);
     Meteor.call('createBetNotification', username, defender, type);
 
     if (Friends.find({ $and: [ { user: user._id }, { friend: defender }  ]}).count() === 0) {
