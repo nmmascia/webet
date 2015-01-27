@@ -1,3 +1,8 @@
 <template name="singleNotification">
   <p style="color: white">You've been challenged by {{ betBy }}!</p>
+  <form class="deleteNotification">
+    <input type="hidden" name="toNotify" value={{ currentUser.username }}>
+    <input type="submit" value="Delete">
+  </form>
 </template>
+
