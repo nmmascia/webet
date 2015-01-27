@@ -117,8 +117,10 @@ body, h1, h2, h3, h4, h5, li, p {
   width: 5em;
   height: 5em;
   border-radius: 5px;
-  font-size: 1em;
-  padding: 0px !important;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  text-align: center;
 }
 
 .square h2 {
