@@ -1,6 +1,9 @@
 <template name="singleBet">
   <div class="singlebet">
     <div class="bet-image">
+      {{# with FS.GetFile 'images' image_id}}
+        <img src="{{ this.url store='images' }}">
+      {{/ with}}
     </div>
     <div class="bet-content">
       <h2>{{ title }} - {{ wager }}</h2>
