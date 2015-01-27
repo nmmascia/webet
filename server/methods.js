@@ -52,5 +52,12 @@ Meteor.methods({
       sentBy: sender,
       bet: bet_id
     });
+  },
+
+  addFriend: function(user_id, friendsName) {
+    Friends.insert({
+      user: user_id,
+      friend: friendsName
+    });
   }
 });

@@ -29,6 +29,8 @@ Template.createBetForm.events({
         user = Meteor.user(),
         username = user.username,
         defender = event.target.defender.value,
+        defender_id = Meteor.users.find({username: defender}).fetch()[0]._id
+        console.log(defender_id)
         betImage = Session.get('image_id'),
         type = 'new';
 
@@ -37,7 +39,14 @@ Template.createBetForm.events({
 
     Meteor.call('createBet', username, defender, title, wager, betImage);
     Meteor.call('createBetNotification', username, defender, type);
-    Router.go('/bets');
+
+    if (Friends.find({ $and: [ { user: user._id }, { friend: defender }  ]}).count() === 0) {
+
+      Meteor.call("addFriend", defender_id, username);
+      Meteor.call("addFriend", user._id, defender);
+    }
+
+    Router.go('/dashboard');
   },
 
   "click .take-photo" : function(event){
