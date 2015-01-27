@@ -16,6 +16,10 @@ body, h1, h2, h3, h4, h5, li, p {
 .bet-content {
 }
 
+.bet-image img {
+  border-radius: 5px;
+}
+
 .bets-grid {
   margin-top: 1em;
 }
@@ -148,8 +152,36 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #fff;
 }
 
+.status-bar {
+  border-radius: 3px;
+  margin: 0.5em 0;
+  padding: 0.1em 0.5em;
+}
+
+.status-bar h3 {
+  color: #fff;
+}
+
+.status-bar.open {
+  background-color: #F4AE17;
+}
+
+.status-bar.pending {
+  background-color: #00C582;
+}
+
+.status-bar.completed {
+  background-color: #646F81;
+}
+
 .submit-button {
   margin-top: 1em;
+}
+
+.title-bar {
+  background-color: #333;
+  border-radius: 3px;
+  padding-left: 0.5em;
 }
 
 .teal {

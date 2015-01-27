@@ -1,13 +1,25 @@
 <template name="singleBet">
-  <div class="singlebet">
+  <div class="singlebet small-12 columns">
     <div class="bet-image">
       {{# with FS.GetFile 'images' image_id}}
         <img src="{{ this.url store='images' }}">
       {{/ with}}
     </div>
     <div class="bet-content">
-      <h2>{{ title }} - {{ wager }}</h2>
-      <h3>Status: {{ status }}</h3>
+      {{# if openStatus }}
+        <div class="status-bar open"><h3>Status: {{ status }}</h3></div>
+      {{/ if}}
+      {{# if pendingStatus }}
+        <div class="status-bar pending"><h3>Status: {{ status }}</h3></div>
+      {{/ if}}
+      {{# if completedStatus }}
+        <div class="status-bar completed"><h3>Status: {{ status }}</h3></div>
+      {{/ if}}
+      <div class="title-bar"><h3 class="teal">The Bet</h3></div>
+      <h3>{{ title }}</h3>
+      <div class="title-bar"><h3 class="teal">The Stakes</h3></div>
+      <h3>{{ wager }}</h3>
+      <div class="title-bar"><h3 class="teal">Parties Involved</h3></div>
       <h3>Challenger: {{ bettors.[0] }}</h3>
       <h3>Defender: {{ bettors.[1] }}</h3>
       {{# if openStatus }}
@@ -16,7 +28,7 @@
         <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close</button>
       {{/ if}}
       {{# if pendingStatus }}
-        <button class="complete_bet_button button radius small">Complete</button>
+        <button class="complete_bet_button button radius small expand">Complete</button>
       {{/ if}}
     </div>
   </div>
