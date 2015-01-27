@@ -76,14 +76,12 @@ Meteor.methods({
       score: 0,
       wonBy: user
     });
-  }, 
+  },
 
   incrementPoints: function(scoreValue, user) {
     Points.update(
     { $inc: {score: 5}},
       {wonBy: user}
     });
-  }, 
-   
-
+  }
 });
