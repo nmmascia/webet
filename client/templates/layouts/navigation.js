@@ -20,5 +20,9 @@ Template.navigation.events({
   "click .completed-button" : function(){
     Session.set( "user", Meteor.user().username );
     Session.set( "status", "completed" );
+  },
+
+  "click .deleteAllNotifications" : function(){
+      Meteor.call("deleteAllNotifications", Meteor.user().username)
   }
 });
