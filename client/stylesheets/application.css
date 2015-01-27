@@ -72,7 +72,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .chat-bar {
-  background-color: #777777;
+  background-color: #000000;
 }
 
 .chat-bar h4 {
@@ -102,8 +102,7 @@ body, h1, h2, h3, h4, h5, li, p {
 
 #chat-client {
   margin-bottom: 1em;
-  background-color: #B8B8B8;
-  overflow: hidden
+  background-color: #F5F5F5;
 }
 
 .complete_bet_button {
