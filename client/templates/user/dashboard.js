@@ -1,4 +1,4 @@
-Template.dashboard.helpers({
+Template._bets.helpers({
   openBets: function(){
     return Bets.find({ $and:
       [ { status: "open" },
@@ -19,7 +19,7 @@ Template.dashboard.helpers({
   }
 });
 
-Template.dashboard.events({
+Template._bets.events({
   "click .open" : function(){
     Session.set( "user", Meteor.user().username );
     Session.set( "status", "open" );
