@@ -76,7 +76,7 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #777777;
 }
 
-.chat-bar h3 {
+.chat-bar h4 {
   color: #fff;
 }
 
@@ -85,6 +85,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 #chat-client {
+  margin-bottom: 1em;
   background-color: #B8B8B8;
   border-radius: 3px;
 }
@@ -222,7 +223,7 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-left: 0.5em;
 }
 
-.title-bar h3 {
+.title-bar h4 {
   color: #fff;
 }
 
