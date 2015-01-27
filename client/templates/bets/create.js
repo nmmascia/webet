@@ -65,4 +65,6 @@ Template.createBetForm.events({
       Session.set('image_id', image._id);
     });
   }
-});
+});    if( isFriend(bet.user._id, defender.username) ) {
+      Meteor.call("addFriend", bet);
+      Meteor.call("addFriend", bet);
