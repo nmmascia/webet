@@ -63,5 +63,11 @@ Meteor.methods({
 
   deleteNotification: function(notification_id){
     BetNotifications.remove({ _id: notification_id })
+  },
+
+  deleteAllNotifications: function(username) {
+    BetNotifications.remove({
+      toNotify: username
+    });
   }
 });
