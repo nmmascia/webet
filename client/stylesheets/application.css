@@ -20,7 +20,9 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .bet-bg-content {
-  margin: 0 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .bet-image img {
@@ -79,7 +81,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .chat-username {
-  color: blue;
+  color: #086AEC;
 }
 
 #chat-client {
