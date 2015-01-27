@@ -16,8 +16,16 @@ Template.entry.events({
          type = "message"
           bet = this._id;
 
+    if (user === this.bettors[0]){
+      toNotify = this.bettors[1]
+      betBy = this.bettors[0]
+    } else {
+      toNotify = this.bettors[0]
+      betBy = this.bettors[1]
+    }
+
     Meteor.call("createMessage", message, user, bet);
-    Meteor.call("createBetNotification", user, defender, type, bet);
+    Meteor.call("createBetNotification", betBy, toNotify, type, bet);
     event.target.message.value = '';
   }
 });
