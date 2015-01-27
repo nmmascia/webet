@@ -2,6 +2,12 @@ Meteor.publish('bets', function(){
   return Bets.find();
 });
 
+Meteor.publish('myBets', function(username) {
+  return Bets.find({
+    bettors: username
+  });
+});
+
 Meteor.publish('betNotifications', function(username){
   return BetNotifications.find({ toNotify: username });
 });
