@@ -35,6 +35,8 @@ Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
 
+    Session.set("defender_name", "")
+
     var bet = {}
     bet.title = event.target.betTitle.value;
     bet.wager = event.target.betWager.value;
