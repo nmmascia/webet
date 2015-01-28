@@ -1,7 +1,7 @@
 Template.messages.helpers({
   messages: function(){
-    return Messages.find({ bet: this._id },
-      { sort: { time: -1 }
+    return Messages.find({ bet: this._id }, {
+      sort: { time: -1 }
     })
   }
 });
