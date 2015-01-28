@@ -18,12 +18,20 @@ Template.betItem.helpers({
       Session.set("complete?", false);
       return false;
     }
+  },
+
+  displayWinner: function(){
+    return this.winner
   }
 });
 
 Template.betItem.events({
   'click .remove_bet_button' : function(){
     Meteor.call("deleteBet", this._id);
+  },
+
+  'click .paid_bet_button' : function(){
+    Meteor.call("updateStatus", this._id, "paid")
   },
 
   'click .accept_button' : function(){
