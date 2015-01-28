@@ -330,6 +330,10 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-bottom: 0 !important;
 }
 
+.find-btn {
+  margin-left: 0.5em !important;
+}
+
 .status-title {
 
 }
@@ -382,4 +386,9 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-left: 1em !important;
   padding-right: 1em !important;
   margin-bottom: 1em;
+}
+
+.search_bar {
+  width: 96% !important;
+  margin-left: 0.5em !important;
 }
