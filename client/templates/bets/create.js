@@ -50,7 +50,9 @@ Template.createBetForm.events({
       Meteor.call("addFriend", bet.defender._id, bet.user._id);
     }
 
-    Router.go('/dashboard');
+    var route = "/bets/" + bet._id
+
+    Router.go(route);
   },
 
   "click .take-photo" : function(event){
