@@ -37,12 +37,12 @@ Meteor.methods({
     Bets.update({ _id : bet_id }, { $set: { status: status }})
   },
 
-  editBet: function(bet_id, user, defender, title, wager) {
-    Bets.update({ _id: bet_id }, {
-      bettors: [ user, defender],
+  editBet: function(bet) {
+    Bets.update({ _id: bet._id }, {
+      bettors: [ bet.user.username, bet.defender.username ],
       status: "open",
-      title: title,
-      wager: wager
+      title: bet.title,
+      wager: bet.wager
     });
   },
 

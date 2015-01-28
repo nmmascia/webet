@@ -4,4 +4,4 @@ Template.count.helpers({
       toNotify: Meteor.user().username
     }).count();
   }
-})
+});

@@ -11,22 +11,14 @@ Template.betItem.helpers({
     return ( this.status === "completed" ) ? true : false;
   },
 
-  showEditForm: function(){
-    if( Session.get("edit") ){
+  showCompleteBetForm: function(){
+    if( Session.get("complete?") ){
       return true;
     } else {
-      Session.set("edit", false);
+      Session.set("complete?", false);
       return false;
     }
-  },
-    showCompleteBetForm: function(){
-      if( Session.get("complete?") ){
-        return true;
-      } else {
-        Session.set("complete?", false);
-        return false;
-      }
-    },
+  }
 });
 
 Template.betItem.events({
@@ -40,11 +32,7 @@ Template.betItem.events({
   },
 
   'click .complete_bet_button' : function(){
-    Session.set("complete?", !Session.get("complete?"))
-  },
-
-  'click .edit_button' : function(){
-    Session.set('edit', !Session.get('edit'));
+    Session.set( "complete?", !Session.get("complete?")) ;
   },
 
   'submit .select-winner' : function(event){
@@ -54,17 +42,5 @@ Template.betItem.events({
     Meteor.call("completeBet", this._id, winner );
     Session.set("complete?", false);
     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed bet", this._id);
-  },
-
-  'submit .edit-bet' : function(event){
-    event.preventDefault();
-
-    var title = event.target.betTitle.value,
-        wager = event.target.betWager.value,
-        user = Meteor.user().username,
-        defender = event.target.defender.value;
-
-    Meteor.call("editBet", this._id, user, defender, title, wager);
-    Session.set('edit', !Session.get('edit'));
   }
 });
