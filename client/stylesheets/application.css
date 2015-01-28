@@ -179,6 +179,21 @@ body, h1, h2, h3, h4, h5, li, p {
   padding: 1em 4em !important;
 }
 
+.lose-stats {
+  height: 5em;
+  width: 3em;
+  border-radius: 5px;
+  background-color: #EC3F3F;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+}
+
+.no-bet {
+  height: 15em;
+  width: 20em;
+  margin-left: 2em;
+}
+
 .off-canvas-wrap, .inner-wrap {
   min-height: 100%;
 }
