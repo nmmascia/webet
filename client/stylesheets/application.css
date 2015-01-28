@@ -436,3 +436,7 @@ body, h1, h2, h3, h4, h5, li, p {
 .create-bet input {
   border-radius: 3px;
 }
+
+.versus-font {
+  font-family: 'Oswald', sans-serif;
+}
