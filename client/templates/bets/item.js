@@ -11,22 +11,14 @@ Template.betItem.helpers({
     return ( this.status === "completed" ) ? true : false;
   },
 
-  showEditForm: function(){
-    if( Session.get("edit") ){
+  showCompleteBetForm: function(){
+    if( Session.get("complete?") ){
       return true;
     } else {
-      Session.set("edit", false);
+      Session.set("complete?", false);
       return false;
     }
-  },
-    showCompleteBetForm: function(){
-      if( Session.get("complete?") ){
-        return true;
-      } else {
-        Session.set("complete?", false);
-        return false;
-      }
-    },
+  }
 });
 
 Template.betItem.events({
