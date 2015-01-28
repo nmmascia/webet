@@ -188,6 +188,12 @@ body, h1, h2, h3, h4, h5, li, p {
   font-size: 1em;
 }
 
+.no-bet {
+  height: 15em;
+  width: 20em;
+  margin-left: 2em;
+}
+
 .off-canvas-wrap, .inner-wrap {
   min-height: 100%;
 }
