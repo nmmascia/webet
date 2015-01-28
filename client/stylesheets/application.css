@@ -274,6 +274,7 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 0.1em 0.5em;
+  border-radius: 3px;
 }
 
 .status-bar h4 {

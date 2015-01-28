@@ -23,6 +23,11 @@ Template.navigation.events({
   },
 
   "click .deleteAllNotifications" : function(){
-      Meteor.call("deleteAllNotifications", Meteor.user().username)
+    Meteor.call("deleteAllNotifications", Meteor.user().username)
+  },
+
+  "click .logout-link" : function(){
+    Session.keys = {};
+    Meteor.logout();
   }
 });
