@@ -20,6 +20,7 @@ var isFriend = function(user, defender){
   return (!friendship) ? true : false;
 };
 
+
 Template.createBetForm.helpers({
   image: function(){
     return Session.get('image');
@@ -37,17 +38,21 @@ Template.createBetForm.events({
     bet.defender = getDefenderByUsername( event.target.defender.value );
     bet.image_id = Session.get('image_id');
     bet.type = 'bet';
+    bet._id = new Meteor.Collection.ObjectID()._str
+
 
     checkForUserAsDefender( bet );
     Meteor.call('createBet', bet);
-    Meteor.call('createBetNotification', bet.user.username, bet.defender.username, bet.type);
+    Meteor.call('createBetNotification', bet.user.username, bet.defender.username, bet.type, bet._id);
 
     if( isFriend(bet.user._id, bet.defender.username) ){
       Meteor.call("addFriend", bet.user._id, bet.defender.username);
       Meteor.call("addFriend", bet.defender._id, bet.user._id);
     }
 
-    Router.go('/dashboard');
+    var route = "/bets/" + bet._id
+
+    Router.go(route);
   },
 
   "click .take-photo" : function(event){

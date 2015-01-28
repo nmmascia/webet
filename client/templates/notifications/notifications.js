@@ -1,5 +1,5 @@
-// Template.notifications.helpers({
-//   notifications: function(){
-//     return BetNotifications.find({ toNotify: Meteor.user().username });
-//   }
-// });
+Template.notifications.helpers({
+  notifications: function(){
+    return BetNotifications.find({ toNotify: Session.get("user") });
+  }
+});

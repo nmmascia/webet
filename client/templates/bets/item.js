@@ -28,6 +28,7 @@ Template.betItem.helpers({
 Template.betItem.events({
   'click .remove_bet_button' : function(){
     Meteor.call("deleteBet", this._id);
+    Meteor.call("deleteBetNotifications", this._id);
   },
 
   'click .paid_bet_button' : function(){

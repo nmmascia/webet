@@ -1,6 +1,7 @@
 Meteor.methods({
   createBet: function(bet) {
     Bets.insert({
+      _id: bet._id,
       bettors: [ bet.user.username, bet.defender.username ],
       status: "open",
       title: bet.title,
@@ -63,6 +64,10 @@ Meteor.methods({
 
   deleteNotification: function(notification_id){
     BetNotifications.remove({ _id: notification_id })
+  },
+
+  deleteBetNotifications: function(bet_id){
+    BetNotifications.remove({ bet_id: bet_id })
   },
 
   deleteAllNotifications: function(username) {
