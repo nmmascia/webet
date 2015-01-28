@@ -31,11 +31,14 @@ body, h1, h2, h3, h4, h5, li, p {
 .bets-info {
   background-color: #472323;
   border-radius: 5px;
+  padding: 0.5em 0;
 }
 
 .bets-info h1 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 700;
+  margin: 0.5em 0;
+  line-height: 1;
 }
 
 .bet-title {
@@ -291,9 +294,9 @@ body, h1, h2, h3, h4, h5, li, p {
 .username {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 3em;
-  letter-spacing: 1.5px;
+  font-size: 2.5em;
   color: #333;
+  overflow: hidden;
 }
 
 .win-stats {
