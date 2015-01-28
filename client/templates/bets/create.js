@@ -24,6 +24,10 @@ var isFriend = function(user, defender){
 Template.createBetForm.helpers({
   image: function(){
     return Session.get('image');
+  },
+
+  defender_value: function(){
+    return Session.get("defender_name")
   }
 })
 
