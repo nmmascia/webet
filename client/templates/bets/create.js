@@ -1,18 +1,24 @@
-var checkForDefender = function(defender){
-  if (Meteor.users.find({username: defender}).count() === 0){
-    throw new Meteor.Error(
-      alert( "Sorry the Username you are trying to challenge is not valid!" )
-    );
-  }
-};
-
 var checkForUserAsDefender = function(options){
-  if (options.defender === options.username) {
+  if( options.defender._id === options.user._id ){
     throw new Meteor.Error(
       alert( "You can't bet yourself!" )
     );
   }
-}
+};
+
+var getDefenderByUsername = function(defender){
+  var defender = Meteor.users.findOne({ username: defender });
+  if( !defender ){
+    throw new Meteor.Error( alert("Invalid User") );
+  } else {
+    return defender;
+  }
+};
+
+var isFriend = function(user, defender){
+  var friendship = Friends.findOne({ user: user, friend: defender });
+  return (!friendship) ? true : false;
+};
 
 Template.createBetForm.helpers({
   image: function(){
@@ -23,27 +29,21 @@ Template.createBetForm.helpers({
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
+    var bet = {}
+    bet.title = event.target.betTitle.value;
+    bet.wager = event.target.betWager.value;
+    bet.user = Meteor.user();
+    bet.defender = getDefenderByUsername( event.target.defender.value );
+    bet.image_id = Session.get('image_id');
+    bet.type = 'bet';
 
-    var title = event.target.betTitle.value,
-        wager = event.target.betWager.value,
-        user = Meteor.user(),
-        username = user.username,
-        defender = event.target.defender.value,
-        defender_id = Meteor.users.find({username: defender}).fetch()[0]._id
-        console.log(defender_id)
-        betImage = Session.get('image_id'),
-        type = 'bet';
+    checkForUserAsDefender( bet );
+    Meteor.call('createBet', bet);
+    Meteor.call('createBetNotification', bet.user.username, bet.defender.username, bet.type);
 
-    checkForUserAsDefender({ username: username, defender: defender });
-    checkForDefender(defender);
-
-    Meteor.call('createBet', username, defender, title, wager, betImage);
-    Meteor.call('createBetNotification', username, defender, type);
-
-    if (Friends.find({ $and: [ { user: user._id }, { friend: defender }  ]}).count() === 0) {
-
-      Meteor.call("addFriend", defender_id, username);
-      Meteor.call("addFriend", user._id, defender);
+    if( isFriend(bet.user._id, bet.defender.username) ) {
+      Meteor.call("addFriend", bet.user._id, bet.defender.username);
+      Meteor.call("addFriend", bet.defender._id, bet.user._id);
     }
 
     Router.go('/dashboard');
