@@ -19,6 +19,9 @@ Template._bets.helpers({
   }
 });
 
+Template.dashboard.rendered =function() {
+    Session.set("userObject", this.data.username)  };
+
 Template._bets.events({
   "click .open" : function(){
     Session.set( "user", Meteor.user().username );
