@@ -8,7 +8,7 @@ Template.betItem.helpers({
   },
 
   completedStatus: function(){
-    return ( this.status === "completed" );
+    return ( this.status === "complete" );
   },
 
   showCompleteBetForm: function(){
