@@ -53,7 +53,7 @@ Template.createBetForm.events({
 
     if( isFriend(bet.user._id, bet.defender.username) ){
       Meteor.call("addFriend", bet.user._id, bet.defender.username);
-      Meteor.call("addFriend", bet.defender._id, bet.user._id);
+      Meteor.call("addFriend", bet.defender._id, bet.user.username);
     }
 
     var route = "/bets/" + bet._id

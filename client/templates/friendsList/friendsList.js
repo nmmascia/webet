@@ -6,7 +6,6 @@ Template.friendsList.helpers({
 
 Template.friendsList.events({
   "click .challenge_button" : function(event) {
-    console.log("HEHEHEH")
     var defender = this.friend
   Session.set("defender_name", this.friend)
   }
