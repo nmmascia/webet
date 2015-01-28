@@ -1,6 +1,5 @@
 Template.singleNotification.events({
-  "click .deleteNotification" : function(event) {
-    event.preventDefault();
+  "click .deleteNotification" : function() {
     Meteor.call("deleteNotification", this._id);
   }
 });
