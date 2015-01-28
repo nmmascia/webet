@@ -1,6 +1,10 @@
+Template.friendsList.rendered = function(){
+  Session.set("userId", Meteor.userId())
+};
+
 Template.friendsList.helpers({
   friends: function(){
-    return Friends.find();
+    return Friends.find({ user: Session.get("userId")})
   }
 });
 
