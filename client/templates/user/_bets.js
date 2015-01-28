@@ -17,7 +17,7 @@ Template._bets.helpers({
   },
   completedBets: function(){
     return Bets.find({ $and:
-      [ { status: 'completed' },
+      [ { status: 'complete' },
         { bettors: Session.get( 'user' ) }
     ]});
   }
@@ -36,6 +36,6 @@ Template._bets.events({
 
   "click .completed" : function(){
     Session.set( 'user', Meteor.user().username );
-    Session.set( 'status', 'completed' );
+    Session.set( 'status', 'complete' );
   }
 });

@@ -8,7 +8,7 @@ Template.singleBet.helpers({
   },
 
   completedStatus: function(){
-    return ( this.status === "completed" );
+    return ( this.status === "complete" );
   },
 
   showEditForm: function(){
