@@ -1,5 +1,6 @@
-Template.dashboard.rendered =function() {
-    Session.set("userObject", this.data.username)  };
+Template.dashboard.rendered = function(){
+    Session.set("userObject", this.data.username)
+};
 
 Template._bets.events({
   "click .open" : function(){
