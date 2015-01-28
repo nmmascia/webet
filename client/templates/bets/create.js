@@ -42,7 +42,7 @@ Template.createBetForm.events({
     Meteor.call('createBet', bet);
     Meteor.call('createBetNotification', bet.user.username, bet.defender.username, bet.type);
 
-    if( isFriend(bet.user._id, bet.defender.username) ) {
+    if( isFriend(bet.user._id, bet.defender.username) ){
       Meteor.call("addFriend", bet.user._id, bet.defender.username);
       Meteor.call("addFriend", bet.defender._id, bet.user._id);
     }
