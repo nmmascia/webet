@@ -58,6 +58,9 @@ Template.createBetForm.events({
 
     var route = "/bets/" + bet._id
 
+    Session.set('image', "");
+    Session.set('image_id', "");
+
     Router.go(route);
   },
 
