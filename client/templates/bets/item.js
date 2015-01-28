@@ -18,6 +18,10 @@ Template.betItem.helpers({
       Session.set("complete?", false);
       return false;
     }
+  },
+
+  displayWinner: function(){
+    return this.winner
   }
 });
 
