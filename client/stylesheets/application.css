@@ -256,10 +256,6 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #646F81;
 }
 
-.submit-button {
-  margin-top: 1em;
-}
-
 .dash-bar {
   background-color: #333;
   height: 0.3em;
@@ -330,6 +326,10 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-bottom: 0 !important;
 }
 
+.find-btn {
+  margin-left: 0.5em !important;
+}
+
 .status-title {
 
 }
@@ -382,4 +382,21 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-left: 1em !important;
   padding-right: 1em !important;
   margin-bottom: 1em;
+}
+
+.submit-button {
+  margin-top: 0.5em !important;
+}
+
+.photo-label {
+  margin-top: 1em;
+}
+
+.search_bar {
+  width: 96% !important;
+  margin-left: 0.5em !important;
+}
+
+.create-bet input {
+  border-radius: 3px;
 }
