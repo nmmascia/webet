@@ -42,7 +42,7 @@ Template.singleBet.events({
   },
 
   'click .complete_bet_button' : function(){
-    Session.set( "complete?", !Session.get("complete?") )
+    Session.set( "complete?", !Session.get("complete?") );
   },
 
   'click .edit_button' : function(){

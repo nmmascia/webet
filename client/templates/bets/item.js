@@ -32,7 +32,7 @@ Template.betItem.events({
   },
 
   'click .complete_bet_button' : function(){
-    Session.set("complete?", !Session.get("complete?"))
+    Session.set( "complete?", !Session.get("complete?")) ;
   },
 
   'submit .select-winner' : function(event){
