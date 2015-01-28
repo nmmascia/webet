@@ -1,3 +1,7 @@
+Template._bets.rendered = function() {
+  Session.set("user", this.data.username);
+};
+
 Template._bets.helpers({
   openBets: function(){
     return Bets.find({ $and:
