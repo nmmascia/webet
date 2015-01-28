@@ -7,10 +7,31 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #333;
 }
 
-.bet {
-  width: 100%;
+.bet-content {
   background-color: #5F788B;
-  padding: 1em 0.5em;
+  padding: 0.5em 0.5em;
+  border-radius: 3px;
+  margin: 0.5em 0;
+}
+
+.bet-content p {
+  margin-bottom: 0.5em;
+}
+
+.open-bet {
+  background-color: #F4AE17;
+}
+
+.pending-bet {
+  background-color: #00C582;
+}
+
+.won-bet {
+  background-color: #1F86AB;
+}
+
+.lost-bet {
+  background-color: #EC3F3F;
 }
 
 .bet-bg {

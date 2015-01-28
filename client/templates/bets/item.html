@@ -1,18 +1,30 @@
 <template name="betItem">
-  <div class="bet">
-    <div class="bet-content">
-      <a href="{{pathFor 'singleBet'}}"><h3><span class="bet-title">{{ title }}</span><br><span class="teal">{{ bettors.[0] }} vs {{ bettors.[1] }}</span></h3></a>
-    </div>
+  <div class="small-12 columns">
     {{# if openStatus }}
-      <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it on!</button>
-      <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close</button>
+      <div class="open-bet bet-content">
+        <a href="{{pathFor 'singleBet'}}"><h4 class="bet-title">{{ title }}</h4><p><i class="fa fa-users"></i> {{ bettors.[0] }} vs {{ bettors.[1] }}</p></a>
+        <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it on!</button>
+        <button class="remove_bet_button button radius red small"><i class="fa fa-ban"></i> Close</button>
+      </div>
     {{/ if }}
     {{# if pendingStatus }}
-      <button class="complete_bet_button button radius small">Complete</button>
+      <div class="pending-bet bet-content">
+        <a href="{{pathFor 'singleBet'}}"><h4 class="bet-title"><i class="fa fa-clock-o"></i> {{ title }}</h4><p><i class="fa fa-users"></i> {{ bettors.[0] }} vs {{ bettors.[1] }}</p></a>
+        <button class="complete_bet_button button radius small">Complete</button>
+      </div>
     {{/ if }}
     {{# if completedStatus }}
-      Winner: {{ displayWinner }}
-      <button class="paid_bet_button button radius red small"><i class="fa fa-ban"></i> Paid</button>
+      {{# if displayWinner }}
+        <div class="won-bet bet-content">
+          <a href="{{pathFor 'singleBet'}}"><h4><span class="bet-title"><i class="fa fa-trophy crazy-yellow"></i> YOU WON:</span> {{ title }}</h4></a>
+          <button class="paid_bet_button button radius success small"><i class="fa fa-check-circle"></i> Paid</button>
+        </div>
+      {{else}}
+        <div class="lost-bet bet-content">
+          <a href="{{pathFor 'singleBet'}}"><h4><span class="bet-title">YOU LOST:</span> {{ title }}</h4></a>
+          <button class="paid_bet_button button radius success small"><i class="fa fa-check-circle"></i> Paid</button>
+        </div>
+      {{/if}}
     {{/ if }}
 
     {{# if showEditForm }}
