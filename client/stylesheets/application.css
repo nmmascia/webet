@@ -210,9 +210,9 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .no-bet {
-  height: 15em;
-  width: 20em;
-  margin-left: 2em;
+  background-color: #EC3F3F;
+  border-radius: 3px;
+  padding: 0.5em;
 }
 
 .off-canvas-wrap, .inner-wrap {
@@ -351,7 +351,6 @@ body, h1, h2, h3, h4, h5, li, p {
   height: 5em;
   width: 8.8em;
   border-radius: 3px;
-  background-color: #EC3F3F;
   margin-bottom: 1.5em;
   font-size: 1em;
   display: inline-block;
@@ -439,4 +438,8 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .versus-font {
   font-family: 'Oswald', sans-serif;
+}
+
+.create-btn {
+  margin-top: 1em;
 }

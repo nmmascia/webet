@@ -1,13 +1,15 @@
 <template name="_noBets">
-  <div>
-    <h2 class="text-center">OOPS...</h2>
-  </div>
+  <div class="small-12 columns">
+    <div>
+      <h2 class="text-center">OOPS...</h2>
+    </div>
 
-  <div class="no-bet paid_bet_button button radius red small">
-    <h4 class= "text-center">
-      Uh Oh...no more bets with this status.
-    </h4>
-    <h4 class= "text-center">Just create one:<br><a href="/bet"><strong>Create A Bet</strong></a>
-    </h4>
+    <div class="no-bet">
+      <h4 class= "text-center">
+        There are no more bets with this status.
+      </h4>
+      <h4 class= "text-center">Want to create a new bet?<a href="/bet" class="create-btn button small radius">Create A Bet</a>
+      </h4>
+    </div>
   </div>
 </template>
