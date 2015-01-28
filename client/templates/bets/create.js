@@ -9,7 +9,7 @@ var checkForUserAsDefender = function(options){
 var getDefenderByUsername = function(defender){
   var defender = Meteor.users.findOne({ username: defender });
   if( !defender ){
-    throw new Meteor.Error( alert("Invalid User") );
+    throw new Meteor.Error( alert('Invalid User') );
   } else {
     return defender;
   }
@@ -22,7 +22,7 @@ var isFriend = function(user, defender){
 
 Template.createBetForm.helpers({
   image: function(){
-    return Session.get("image");
+    return Session.get('image');
   }
 })
 
