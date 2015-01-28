@@ -43,10 +43,6 @@ Template.betItem.events({
     Session.set("complete?", !Session.get("complete?"))
   },
 
-  'click .edit_button' : function(){
-    Session.set('edit', !Session.get('edit'));
-  },
-
   'submit .select-winner' : function(event){
     event.preventDefault();
     var winner =  event.target.children.choose_winner.value;
@@ -54,19 +50,5 @@ Template.betItem.events({
     Meteor.call("completeBet", this._id, winner );
     Session.set("complete?", false);
     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed bet", this._id);
-  },
-
-  'submit .edit-bet' : function(event){
-    event.preventDefault();
-
-    var bet = {}
-    bet._id = this._id;
-    bet.title = event.target.betTitle.value;
-    bet.wager = event.target.betWager.value;
-    bet.user = Meteor.user();
-    bet.defender = Meteor.users.findOne({ username: event.target.defender.value });
-
-    Meteor.call( 'editBet', bet );
-    Session.set( 'edit', !Session.get('edit') );
   }
 });
