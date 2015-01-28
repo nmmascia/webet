@@ -9,7 +9,7 @@ Meteor.publish('myBets', function(username) {
 });
 
 Meteor.publish('betNotifications', function(){
-  return BetNotifications.find();
+  return BetNotifications.find({ toNotify: this.userId });
 });
 
 Meteor.publish('messages', function(){
@@ -26,11 +26,11 @@ Meteor.publish('images', function(){
 });
 
 Meteor.publish("friendsList", function() {
-  return Friends.find();
+  return Friends.find({ user: this.userId });
 });
 
- Meteor.publish("myFriends", function(userId) {
-  return Friends.find({ user: userId })
+ Meteor.publish("myFriends", function() {
+  return Friends.find({ user: this.userId })
  })
 
 Meteor.publish('points', function(){
