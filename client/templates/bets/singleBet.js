@@ -61,12 +61,14 @@ Template.singleBet.events({
   'submit .edit-bet' : function(event){
     event.preventDefault();
 
-    var title = event.target.betTitle.value,
-        wager = event.target.betWager.value,
-        user = Meteor.user().username,
-        defender = event.target.defender.value;
+    var bet = {}
+    bet._id = this._id;
+    bet.title = event.target.betTitle.value;
+    bet.wager = event.target.betWager.value;
+    bet.user = Meteor.user();
+    bet.defender = Meteor.users.findOne({ username: event.target.defender.value });
 
-    Meteor.call("editBet", this._id, user, defender, title, wager);
-    Session.set('edit', !Session.get('edit'));
+    Meteor.call( 'editBet', bet );
+    Session.set( 'edit', !Session.get('edit') );
   }
 });
