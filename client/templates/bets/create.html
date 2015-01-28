@@ -1,19 +1,21 @@
 <template name="createBetForm">
-  <form class="create-bet">
+  <form class="create-bet small-12 columns">
     <h4 class="text-center">Your bet?</h4>
     <input type="text" name="betTitle" placeholder="I bet that...">
     <h4 class="text-center">The stakes?</h4>
     <input type="text" name="betWager" placeholder="Money? Loser dresses like a gorilla?">
-    <h4 class="text-center">Who will you challenge?</h4>
+    <h4 class="text-center">Against who?</h4>
     <input type="text" name="defender" placeholder="Your best friend? Your mother?">
     <div id="photo-container">
-      <h4 class="text-center">Add a Photo</h4>
-      <button class="take-photo button alert radius small">Take Photo</button>
+      <h4 class="text-center photo-label">Add a Photo</h4>
+      <div class="small-6 small-centered columns">
+        <button class="take-photo button alert radius small expand"><i class="fa fa-camera"></i></button>
+      </div>
       {{#if image}}
         <div class="form-image"><img src={{ image }}></div>
       {{/if}}
     </div>
-    <input type="submit" class="submit-button button expand" value="Submit">
+    <input type="submit" class="submit-button expand radius button" value="Submit">
   </form>
 </template>
 
