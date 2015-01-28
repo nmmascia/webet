@@ -1,14 +1,14 @@
 Template.betItem.helpers({
   openStatus: function(){
-    return ( this.status === "open" ) ? true : false;
+    return ( this.status === "open" );
   },
 
   pendingStatus: function(){
-    return ( this.status === "pending" ) ? true : false;
+    return ( this.status === "pending" );
   },
 
   completedStatus: function(){
-    return ( this.status === "completed" ) ? true : false;
+    return ( this.status === "completed" );
   },
 
   showCompleteBetForm: function(){
