@@ -24,16 +24,34 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-bottom: 0.5em;
 }
 
-.bet-image img {
-  border-radius: 5px;
-}
-
 .bets-grid {
   margin-top: 1em;
 }
 
+.bets-info {
+  background-color: #472323;
+  border-radius: 5px;
+}
+
+.bets-info h1 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+}
+
 .bet-title {
   color: #fff;
+}
+
+.bets-completed {
+  color: #646F81;
+}
+
+.bets-open {
+  color: #F4AE17;
+}
+
+.bets-pending {
+  color: #00C582;
 }
 
 .blue {
@@ -187,7 +205,7 @@ body, h1, h2, h3, h4, h5, li, p {
   border-radius: 5px;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  padding-top: 1em;
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -217,7 +235,8 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .status-bar {
-  margin: 0.5em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 0.1em 0.5em;
 }
 
@@ -292,14 +311,17 @@ body, h1, h2, h3, h4, h5, li, p {
 .accept_button {
   padding-left: 1em !important;
   padding-right: 1em !important;
+  margin-bottom: 1em;
 }
 
 .edit_button {
   padding-left: 1em !important;
   padding-right: 1em !important;
+  margin-bottom: 1em;
 }
 
 .remove_bet_button {
   padding-left: 1em !important;
   padding-right: 1em !important;
+  margin-bottom: 1em;
 }
