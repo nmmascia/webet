@@ -41,6 +41,8 @@ Template.betItem.events({
 
     Meteor.call("completeBet", this._id, winner );
     Session.set("complete?", false);
+    Meteor.call("createPoints", 0, this._id);
+    Meteor.call("incrementPoints",  this._id, 5);
     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed bet", this._id);
   }
 });
