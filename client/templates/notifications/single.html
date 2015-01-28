@@ -1,9 +1,5 @@
 <template name="singleNotification">
-  <li><a href="{{ pathFor 'singleBet' _id=this.bet_id }}">You have a new {{ type }} from {{ betBy }}!</a></li>
-  <form class="deleteNotification">
-    <input type="hidden" name="toNotify" value={{ currentUser.username }}>
-    <input type="submit" value="Delete">
-  </form>
+  <li><a href="{{ pathFor 'singleBet' _id=this.bet_id }}" class="deleteNotification">You have a new {{ type }} from {{ betBy }}!</a></li>
 </template>
 
 
