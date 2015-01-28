@@ -24,10 +24,6 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-bottom: 0.5em;
 }
 
-.bets-grid {
-  margin-top: 1em;
-}
-
 .bets-info {
   background-color: #472323;
   border-radius: 5px;
@@ -216,6 +212,7 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin-bottom: 0;
+  padding-bottom: 0;
   text-align: center;
 }
 
@@ -314,6 +311,27 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-bottom: 1.5em;
   font-size: 1em;
   display: inline-block;
+}
+
+.small-block-grid-3 {
+  margin-bottom: 0;
+  padding-bottom: 0 !important;
+}
+
+.status-title {
+
+}
+
+.bets-grid {
+  margin-top: 1em;
+}
+
+.small-block-grid-3 li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.bet-info-grid {
 }
 
 .welcome {
