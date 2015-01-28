@@ -24,12 +24,18 @@ var isFriend = function(user, defender){
 Template.createBetForm.helpers({
   image: function(){
     return Session.get('image');
+  },
+
+  defender_value: function(){
+    return Session.get("defender_name")
   }
 })
 
 Template.createBetForm.events({
   "submit .create-bet" : function(event){
     event.preventDefault();
+
+    Session.set("defender_name", "")
 
     var bet = {}
     bet.title = event.target.betTitle.value;
