@@ -143,6 +143,17 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #086AEC;
 }
 
+.form-image {
+  width: 85%;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+}
+
+.form-image img {
+  border-radius: 3px;
+}
+
 .gray {
   color: #646F81;
 }
