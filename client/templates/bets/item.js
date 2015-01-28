@@ -60,12 +60,13 @@ Template.betItem.events({
     event.preventDefault();
 
     var bet = {}
+    bet._id = this._id;
     bet.title = event.target.betTitle.value;
     bet.wager = event.target.betWager.value;
     bet.user = Meteor.user();
-    bet.defender = event.target.defender.value;
+    bet.defender = Meteor.users.findOne({ username: event.target.defender.value });
 
-    Meteor.call('editBet', bet);
+    Meteor.call( 'editBet', bet );
     Session.set( 'edit', !Session.get('edit') );
   }
 });
