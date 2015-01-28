@@ -1,6 +1,7 @@
 Meteor.methods({
   createBet: function(bet) {
     Bets.insert({
+      _id: bet._id,
       bettors: [ bet.user.username, bet.defender.username ],
       status: "open",
       title: bet.title,
