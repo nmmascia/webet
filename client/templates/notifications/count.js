@@ -1,7 +1,7 @@
 Template.count.helpers({
   notificationsCount: function(){
     return BetNotifications.find({
-      toNotify: Meteor.user().username
+      toNotify: Session.get("user")
     }).count();
   }
 });
