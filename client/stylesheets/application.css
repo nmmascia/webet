@@ -154,6 +154,10 @@ body, h1, h2, h3, h4, h5, li, p {
   border-radius: 3px;
 }
 
+.friend {
+  margin-left: 0.5em;
+}
+
 .gray {
   color: #646F81;
 }

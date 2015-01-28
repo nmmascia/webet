@@ -1,14 +1,15 @@
 <template name="friendsList">
-  <h3>Friends</h3>
 
   <form class="search_friends">
     <input type="text" name="find_friend" placeholder="Search for friends" class="search_bar">
-    <input type="submit" value="Find Friends">
+    <button type="submit" class="button small">Find Friends</button>
   </form>
 
+  <div class="title-bar">
+    <h4>{{currentUser.username}}'s Friends</h4>
+  </div>
   {{#each friends }}
-    <li><a href="{{ pathFor 'friends' }}">{{ friend }}</a></li>
-    <a href="/bet"><button class="challenge_button">Challenge</button></a>
+    <span class="friend"><i class="fa fa-user"></i> {{ friend }} - <a href="/bet">Challenge</a><br></span>
   {{/ each }}
 
 </template>
