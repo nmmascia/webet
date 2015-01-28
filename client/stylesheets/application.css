@@ -183,14 +183,6 @@ body, h1, h2, h3, h4, h5, li, p {
   padding: 1em 4em !important;
 }
 
-.lose-stats {
-  height: 5em;
-  border-radius: 5px;
-  background-color: #EC3F3F;
-  margin-bottom: 1.5em;
-  font-size: 1em;
-}
-
 .off-canvas-wrap, .inner-wrap {
   min-height: 100%;
 }
@@ -245,13 +237,6 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #00C582;
 }
 
-.stats {
-  padding: 0.5em 0;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 700;
-  color: #fff;
-}
-
 .status-bar {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -299,11 +284,36 @@ body, h1, h2, h3, h4, h5, li, p {
   overflow: hidden;
 }
 
+.stats {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stats-container {
+  margin-top: 1em;
+}
+
 .win-stats {
+  padding-top: 1em;
+  display: inline-block;
   height: 5em;
+  width: 8.8em;
+  margin-right: 0.2em;
   border-radius: 5px;
   background-color: #1F86AB;
   margin-bottom: 1.5em;
+}
+
+.lose-stats {
+  padding-top: 1em;
+  height: 5em;
+  width: 8.8em;
+  border-radius: 5px;
+  background-color: #EC3F3F;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+  display: inline-block;
 }
 
 .welcome {
