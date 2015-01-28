@@ -4,4 +4,10 @@
     <li><a href="/bets" class="button square pending"><h2>{{pendingBets.count}} <i class="small-icon fa fa-cog"></i></h2></a></li>
     <li><a href="/bets" class="button square completed"><h2>{{completedBets.count}} <i class="small-icon fa fa-check-circle-o"></i></h2></a></li>
   </ul>
+
+  <div class="bets-info">
+    <h1 class="bets-open text-center">Open: {{openBets.count}}</h1>
+    <h1 class="bets-pending text-center">Pending: {{pendingBets.count}}</h1>
+    <h1 class="bets-completed text-center">Completed: {{completedBets.count}}</h1>
+  </div>
 </template>
