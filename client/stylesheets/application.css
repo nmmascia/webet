@@ -427,6 +427,10 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-top: 1em;
 }
 
+.search_friends input {
+  border-radius: 3px;
+}
+
 .search_bar {
   width: 96% !important;
   margin-left: 0.5em !important;
