@@ -21,7 +21,7 @@ Template.betItem.helpers({
   },
 
   displayWinner: function(){
-    return this.winner
+    return (this.winner === Session.get("user"))
   }
 });
 
