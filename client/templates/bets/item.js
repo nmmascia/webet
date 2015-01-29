@@ -42,6 +42,12 @@ Template.betItem.events({
      Router.go(route)
   },
 
+  'click .counter_bet_button' : function(){
+    Session.set("counterbet", true)
+    var route = "/bets/" + this._id
+    Router.go(route)
+  },
+
   'click .complete_bet_button' : function(){
     Session.set( "complete?", !Session.get("complete?")) ;
     var route = "/bets/" + this._id;
