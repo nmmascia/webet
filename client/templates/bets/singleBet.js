@@ -29,10 +29,6 @@ Template.singleBet.helpers({
     }
   },
 
-   showCounterButton: function(){
-    (Session.get("user") === this.bettors[1])
-  },
-
     showCounterBetForm: function(){
       if ( Session.get("counterbet")) {
         return true
