@@ -531,3 +531,7 @@ body, h1, h2, h3, h4, h5, li, p {
   width: 5em;
   border-radius: 150px;
 }
+
+.winner-btn {
+  margin-top: 1em;
+}
