@@ -66,6 +66,11 @@ Template.singleBet.events({
     Session.set( 'edit', !Session.get('edit') );
   },
 
+  'click .paid_bet_button' : function(){
+    Meteor.call("updateStatus", this._id, "paid");
+    Router.go('/bets')
+  },
+
   'click .counter_bet_button' : function(){
     Session.set("counterbet", !(Session.get("counterbet")))
   },

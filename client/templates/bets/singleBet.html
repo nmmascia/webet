@@ -39,13 +39,18 @@
 
       {{/ if }}
 
+      <button class="remove_bet_button button red small radius"><i class="fa fa-ban"></i> Close Bet</button>
+
     {{ / if }}
 
-        <button class="remove_bet_button button red small radius"><i class="fa fa-ban"></i> Close Bet</button>
 
-      {{# if pendingStatus }}
-        <button class="complete_bet_button button expand radius">Complete</button>
-      {{/ if }}
+    {{# if pendingStatus }}
+      <button class="complete_bet_button button expand radius">Complete</button>
+    {{/ if }}
+
+    {{# if completedStatus }}
+      <button class="paid_bet_button button radius success expand">Paid</button>
+    {{/ if }}
 
     {{# if showEditForm }}
       {{> editBetForm }}
