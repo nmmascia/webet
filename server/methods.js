@@ -43,7 +43,8 @@ Meteor.methods({
       bettors: [ bet.user.username, bet.defender.username ],
       status: "open",
       title: bet.title,
-      wager: bet.wager
+      wager: bet.wager,
+      image_id: bet.image_id
     });
   },
 
