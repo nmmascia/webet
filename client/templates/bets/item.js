@@ -42,6 +42,8 @@ Template.betItem.events({
 
   'click .complete_bet_button' : function(){
     Session.set( "complete?", !Session.get("complete?")) ;
+    var route = "/bets/" + this._id;
+    Router.go(route);
   },
 
   'submit .select-winner' : function(event){
@@ -53,5 +55,6 @@ Template.betItem.events({
     Meteor.call("createPoints", 0, this._id);
     Meteor.call("incrementPoints",  this._id, 5);
     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed bet", this._id);
+
   }
 });
