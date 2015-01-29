@@ -27,7 +27,20 @@ Template.singleBet.helpers({
       Session.set("complete?", false);
       return false;
     }
-  }
+  },
+
+   showCounterButton: function(){
+    (Session.get("user") === this.bettors[1])
+  },
+
+    showCounterBetForm: function(){
+      if ( Session.get("counterbet")) {
+        return true
+      } else {
+        Session.set("counterbet")
+        return false
+      }
+    },
 });
 
 Template.singleBet.events({
@@ -47,6 +60,10 @@ Template.singleBet.events({
 
   'click .edit_button' : function(){
     Session.set( 'edit', !Session.get('edit') );
+  },
+
+  'click .counter_bet_button' : function(){
+    Session.set("counterbet", !(Session.get("counterbet")))
   },
 
   'submit .select-winner' : function(event){
