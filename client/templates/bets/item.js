@@ -42,7 +42,7 @@ Template.betItem.events({
 
   'click .accept_button' : function(){
      Meteor.call("updateStatus", this._id, "pending");
-     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "accepted bet", this._id);
+     Meteor.call("createBetNotification", this.bettors[1], this.bettors[0], "accepted bet", this._id);
      var route = "/bets/" + this._id
      Router.go(route)
   },
@@ -57,6 +57,12 @@ Template.betItem.events({
     Session.set( "complete?", !Session.get("complete?")) ;
     var route = "/bets/" + this._id;
     Router.go(route);
+  },
+
+  'click .edit_bet_button' : function(){
+     Session.set( 'edit', true );
+     var route = "/bets/" + this._id;
+     Router.go(route)
   },
 
   'submit .select-winner' : function(event){
