@@ -412,15 +412,14 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .edit_button {
-  padding-left: 1em !important;
-  padding-right: 1em !important;
+  margin-right: 0.5em;
   margin-bottom: 1em;
+  width: 10.7em;
 }
 
 .remove_bet_button {
-  padding-left: 1em !important;
-  padding-right: 1em !important;
   margin-bottom: 1em;
+  width: 10.7em;
 }
 
 .submit-button {
