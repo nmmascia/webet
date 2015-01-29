@@ -13,6 +13,12 @@ body, h1, h2, h3, h4, h5, li, p {
   margin: 0.5em 0;
 }
 
+.bet-list-content {
+  padding: 0.5em 0.5em;
+  border-radius: 3px;
+  margin: 0.5em 0;
+}
+
 .bet-content p {
   margin-bottom: 0.5em;
 }
@@ -420,6 +426,12 @@ body, h1, h2, h3, h4, h5, li, p {
 .remove_bet_button {
   margin-bottom: 1em;
   width: 10.7em;
+}
+
+.close_bet_button {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  margin-bottom: 1em;
 }
 
 .submit-button {
