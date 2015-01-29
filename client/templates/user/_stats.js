@@ -7,10 +7,6 @@ Template._stats.helpers({
         points = Points.findOne({ wonBy: user }),
         losses = (paidBets + completedBets) - wins;
 
-        console.log("WINS: " + wins);
-        console.log("PAID BETS: " + paidBets);
-        console.log("COMPLETED: " + completedBets);
-
     return [wins, losses]
   }
 });

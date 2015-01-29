@@ -1,6 +1,8 @@
 <template name="_dash_header">
   <img src={{ currentUser.profile.picture }}>
-  <span class="username text-center">{{ currentUser.username }}</span>
+  <div class="username-container">
+    <span class="username text-center">{{ currentUser.username }}</span>
+  </div>
   <div class="dash-bar"></div>
   <h1 class="dash-bets-title text-center">Your Bets</h1>
 </template>
