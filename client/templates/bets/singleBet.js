@@ -68,7 +68,7 @@ Template.singleBet.events({
 
   'click .paid_bet_button' : function(){
     Meteor.call("updateStatus", this._id, "paid");
-    Router.go('/bets')
+    Router.go('/dashboard')
   },
 
   'click .counter_bet_button' : function(){

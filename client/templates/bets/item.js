@@ -37,7 +37,8 @@ Template.betItem.events({
   },
 
   'click .paid_bet_button' : function(){
-    Meteor.call("updateStatus", this._id, "paid")
+    Meteor.call("updateStatus", this._id, "paid");
+    Router.go('/dashboard');
   },
 
   'click .accept_button' : function(){
