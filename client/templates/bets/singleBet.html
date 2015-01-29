@@ -4,10 +4,10 @@
       <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
     {{/ if }}
     {{# if pendingStatus }}
-      <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
+      <div class="status-bar pending"><h4 class="text-center">Status: {{ status }}</h4></div>
     {{/ if }}
     {{# if completedStatus }}
-      <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
+      <div class="status-bar completed"><h4 class="text-center">Status: {{ status }}</h4></div>
     {{/ if }}
     <div class="bet-image">
       {{# with FS.GetFile 'images' image_id}}
@@ -15,31 +15,33 @@
       {{/ with}}
     </div>
     <div class="bet-content">
-      <div class="bet-bg">
-        <div class="title-bar"><h4>The Bet</h4></div>
-        <h4 class="bet-bg-content">{{ title }}</h4>
-        <div class="title-bar"><h4>The Stakes</h4></div>
-        <h4 class="bet-bg-content">{{ wager }}</h4>
-        <div class="title-bar"><h4>Parties Involved</h4></div>
-        <h4 class="bet-bg-content">Challenger: {{ bettors.[0] }}<br>Defender: {{ bettors.[1] }}</h4>
-      </div>
-      {{# if openStatus }}
-        <button class="accept_button button small expand radius"><i class="fa fa-check-square-o"></i> Bring it on!</button>
-        <button class="edit_button button green small expand radius"><i class="fa fa-pencil-square-o"></i> Edit Bet</button>
-        <button class="remove_bet_button button red small expand radius"><i class="fa fa-ban"></i> Close Bet</button>
-      {{/ if}}
-      {{# if pendingStatus }}
-        <button class="complete_bet_button button expand">Complete</button>
-      {{/ if}}
-
-      {{# if showEditForm }}
-        {{> editBetForm }}
-      {{/ if }}
-
-      {{# if showCompleteBetForm }}
-        {{> completeBetForm }}
-      {{/ if }}
+      <div class="title-bar"><h4>The Bet</h4></div>
+      <h4 class="bet-bg-content">{{ title }}</h4>
     </div>
+    <div class="bet-content">
+      <div class="title-bar"><h4>The Stakes</h4></div>
+      <h4 class="bet-bg-content">{{ wager }}</h4>
+    </div>
+    <div class="bet-content">
+      <div class="title-bar"><h4>Parties Involved</h4></div>
+      <h4 class="bet-bg-content">Challenger: {{ bettors.[0] }}<br>Defender: {{ bettors.[1] }}</h4>
+    </div>
+    {{# if openStatus }}
+      <button class="accept_button button small expand radius"><i class="fa fa-check-square-o"></i> Bring it on!</button>
+      <button class="edit_button button green small expand radius"><i class="fa fa-pencil-square-o"></i> Edit Bet</button>
+      <button class="remove_bet_button button red small expand radius"><i class="fa fa-ban"></i> Close Bet</button>
+    {{/ if}}
+    {{# if pendingStatus }}
+      <button class="complete_bet_button button expand radius">Complete</button>
+    {{/ if}}
+
+    {{# if showEditForm }}
+      {{> editBetForm }}
+    {{/ if }}
+
+    {{# if showCompleteBetForm }}
+      {{> completeBetForm }}
+    {{/ if }}
     <div id="chat-client">
       <div class="chat-bar"><h4 class="text-center">Chatbox</h4></div>
       {{> messages }}

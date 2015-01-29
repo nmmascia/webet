@@ -8,8 +8,7 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .bet-content {
-  background-color: #5F788B;
-  padding: 0.5em 0.5em;
+  background-color: #DBD9D9;
   border-radius: 3px;
   margin: 0.5em 0;
 }
@@ -110,7 +109,9 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .chat-bar {
-  background-color: #000000;
+  background-color: #2C5FB7;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .chat-bar h4 {
@@ -141,6 +142,7 @@ body, h1, h2, h3, h4, h5, li, p {
 #chat-client {
   margin-bottom: 1em;
   background-color: #F5F5F5;
+  border-radius: 3px;
 }
 
 .complete_bet_button {
@@ -306,12 +308,16 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .title-bar {
-  background-color: #333;
+  background-color: #808080;
   padding-left: 0.5em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .title-bar h4 {
   color: #fff;
+  font-family: 'Copse', serif;
+  font-weight: 400;
 }
 
 .teal {
