@@ -109,6 +109,12 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #FFF;
 }
 
+.button.teal {
+  background-color: #0AA38C;
+  border-color: #0AA38C;
+  color: #fff;
+}
+
 .button.red{
   background-color: #EC3F3F;
   border-color: #EC3F3F;
