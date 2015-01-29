@@ -91,5 +91,20 @@ Template.singleBet.events({
 
     Meteor.call( 'editBet', bet );
     Session.set( 'edit', !Session.get('edit') );
+  },
+
+   'submit .counterBetForm' : function(event){
+    event.preventDefault();
+
+    var bet = {}
+    bet._id = this._id;
+    bet.title = event.target.betTitle.value;
+    bet.wager = event.target.betWager.value;
+    bet.user = Meteor.user();
+    bet.defender = Meteor.users.findOne({ username: event.target.defender.value });
+
+    Meteor.call( 'editBet', bet );
+    Meteor.call("createBetNotification", bet.user.username, bet.defender, "counter" )
+    Session.set( 'counterbet', !Session.get('counterbet') );
   }
 });
