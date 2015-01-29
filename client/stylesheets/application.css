@@ -8,7 +8,12 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .bet-content {
-  background-color: #5F788B;
+  background-color: #DBD9D9;
+  border-radius: 3px;
+  margin: 0.5em 0;
+}
+
+.bet-list-content {
   padding: 0.5em 0.5em;
   border-radius: 3px;
   margin: 0.5em 0;
@@ -110,7 +115,9 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .chat-bar {
-  background-color: #000000;
+  background-color: #2C5FB7;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .chat-bar h4 {
@@ -141,6 +148,7 @@ body, h1, h2, h3, h4, h5, li, p {
 #chat-client {
   margin-bottom: 1em;
   background-color: #F5F5F5;
+  border-radius: 3px;
 }
 
 .complete_bet_button {
@@ -271,8 +279,8 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .status-bar {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   padding: 0.1em 0.5em;
   border-radius: 3px;
 }
@@ -306,13 +314,29 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .title-bar {
-  background-color: #333;
+  background-color: #808080;
   padding-left: 0.5em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .title-bar h4 {
   color: #fff;
+  font-family: 'Copse', serif;
+  font-weight: 400;
 }
+
+.friends-bar {
+  background-color: #808080;
+  padding-left: 0.5em;
+}
+
+.friends-bar h4 {
+  color: #fff;
+  font-family: 'Copse', serif;
+  font-weight: 400;
+}
+
 
 .teal {
   color: #74DBF4;
@@ -379,7 +403,8 @@ body, h1, h2, h3, h4, h5, li, p {
   padding-bottom: 0;
 }
 
-.bet-info-grid {
+.bet-image img {
+  border-radius: 3px;
 }
 
 .notification-count {
@@ -405,12 +430,17 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .edit_button {
-  padding-left: 1em !important;
-  padding-right: 1em !important;
+  margin-right: 0.5em;
   margin-bottom: 1em;
+  width: 10.7em;
 }
 
 .remove_bet_button {
+  margin-bottom: 1em;
+  width: 10.7em;
+}
+
+.close_bet_button {
   padding-left: 1em !important;
   padding-right: 1em !important;
   margin-bottom: 1em;
