@@ -92,8 +92,8 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .button.green {
-  background-color: #86CA3C;
-  border-color: #86CA3C;
+  background-color: #0CA920;
+  border-color: #0CA920;
   color: #FFF;
 }
 
@@ -107,6 +107,12 @@ body, h1, h2, h3, h4, h5, li, p {
   background-color: #FA9B1C;
   border-color: #FA9B1C;
   color: #FFF;
+}
+
+.button.teal {
+  background-color: #0AA38C;
+  border-color: #0AA38C;
+  color: #fff;
 }
 
 .button.red{
@@ -503,10 +509,6 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-bottom: 0.3em;
 }
 
-.or {
-  display: none;
-}
-
 .configure-text-facebook {
   display: 'Oswald', sans-serif;
 }
@@ -518,4 +520,30 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 .username-container {
   margin: 0 auto;
+}
+
+.username-container img {
+  height: 5em;
+  width: 5em;
+  border-radius: 150px;
+}
+
+.winner-btn {
+  margin-top: 1em;
+}
+
+.sign-in-text-facebook {
+  margin-bottom: 1em;
+  border-radius: 3px;
+  background-color: #1650BA;
+  border-color: #1650BA;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.8125rem;
+  padding: 1em;
+}
+
+.login-text-and-button {
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
 }
