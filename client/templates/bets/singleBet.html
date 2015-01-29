@@ -56,6 +56,11 @@
     {{# if showCompleteBetForm }}
       {{> completeBetForm }}
     {{/ if }}
+
+    {{# if showCounterBetForm}}
+      {{> counterBetForm}}
+    {{ / if }}
+
     <div id="chat-client">
       <div class="chat-bar"><h4 class="text-center">Chatbox</h4></div>
       {{> messages }}
