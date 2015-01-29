@@ -1,19 +1,4 @@
-<template name="navigation">
-  <nav class="tab-bar" data-topbar="topbar">
-    <section class="left-small">
-      <a href="#" class="left-off-canvas-toggle menu-icon"><span></span></a>
-    </section>
-
-    <section class="middle tab-bar-section">
-      <h1 class="logo"><a href="/" style="color: #FFFFFF">WeBet</a></h1>
-    </section>
-
-    <section class="right-small">
-      {{> count }}
-    </section>
-
-  </nav>
-
+<template name="_leftMenu">
   <aside class="left-off-canvas-menu">
     <ul class="off-canvas-list">
       {{# if currentUser }}
@@ -34,13 +19,4 @@
       {{/ if }}
     </ul>
   </aside>
-
-  <aside class="right-off-canvas-menu">
-    <ul class="off-canvas-list">
-      <li><label>Notifications</label></li>
-      <button class="deleteAllNotifications button alert small">Clear All</button>
-      {{> notifications }}
-    </ul>
-  </aside>
-
 </template>

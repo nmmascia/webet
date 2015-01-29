@@ -1,0 +1,11 @@
+<template name="_snapPhoto">
+  <div id="photo-container">
+    <h4 class="text-center photo-label">Add a Photo</h4>
+    <div class="small-6 small-centered columns">
+      <button class="take-photo button alert radius small expand"><i class="fa fa-camera"></i></button>
+    </div>
+    {{#if image}}
+      <div class="form-image"><img src={{ image }}></div>
+    {{/if}}
+  </div>
+</template>
