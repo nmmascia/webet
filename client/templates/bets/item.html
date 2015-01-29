@@ -18,7 +18,7 @@
       <div class="pending-bet bet-list-content">
         <a href="{{pathFor 'singleBet'}}"><h4 class="bet-title"><i class="fa fa-clock-o"></i> {{ title }}</h4><p><i class="fa fa-users"></i> {{ bettors.[0] }} <span class="versus-font">vs</span> {{ bettors.[1] }}</p></a>
 
-        <button class="complete_bet_button button radius small">Complete</button>
+        <button class="complete_bet_button button radius small">Select Winner</button>
       </div>
     {{/ if }}
 
@@ -33,7 +33,7 @@
         <div class="lost-bet bet-list-content">
           <a href="{{pathFor 'singleBet'}}"><h4><span class="bet-title">YOU LOST:</span> {{ title }}</h4></a>
 
-          <button class="paid_bet_button button radius success small"><i class="fa fa-check-circle"></i> Paid</button>
+          <button class="paid_bet_button button radius success small">Paid</button>
         </div>
       {{/if}}
     {{/ if }}
