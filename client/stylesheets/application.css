@@ -236,6 +236,10 @@ body, h1, h2, h3, h4, h5, li, p {
   color: #EC3F3F;
 }
 
+.search_friends {
+  margin-top: 1em;
+}
+
 .send-button {
   color: #fff;
   margin: 1em 0;
@@ -313,6 +317,10 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-bottom: 0;
 }
 
+.dash-body {
+  margin-top: 1em;
+}
+
 .title-bar {
   background-color: #808080;
   padding-left: 0.5em;
@@ -327,8 +335,10 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .friends-bar {
-  background-color: #808080;
+  background-color: #484848;
   padding-left: 0.5em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .friends-bar h4 {
@@ -384,14 +394,6 @@ body, h1, h2, h3, h4, h5, li, p {
 .small-block-grid-3 {
   margin-bottom: 0;
   padding-bottom: 0 !important;
-}
-
-.find-btn {
-  margin-left: 0.5em !important;
-}
-
-.status-title {
-
 }
 
 .bets-grid {
@@ -458,11 +460,6 @@ body, h1, h2, h3, h4, h5, li, p {
   border-radius: 3px;
 }
 
-.search_bar {
-  width: 96% !important;
-  margin-left: 0.5em !important;
-}
-
 .create-bet input {
   border-radius: 3px;
 }
@@ -509,4 +506,10 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .configure-text-facebook {
   display: none;
+}
+
+.friends-content {
+  background-color: #DBD9D9;
+  border-radius: 3px;
+  padding-bottom: 0.5em;
 }
