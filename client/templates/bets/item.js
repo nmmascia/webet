@@ -18,6 +18,11 @@ Template.betItem.helpers({
       Session.set("complete?", false);
       return false;
     }
+
+  },
+
+  showCounterButton: function(){
+    (Session.get("user") === this.bettors[1])
   },
 
   displayWinner: function(){
