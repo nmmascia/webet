@@ -27,15 +27,27 @@
       <div class="title-bar"><h4>Parties Involved</h4></div>
       <h4 class="bet-bg-content"><i class="fa fa-users"></i> {{ bettors.[0] }} <span class="versus-font">vs</span> {{ bettors.[1] }}</h4>
     </div>
+
     {{# if openStatus }}
       <button class="accept_button button small expand radius"><i class="fa fa-check-square-o"></i> Bring it on!</button>
-      <button class="edit_button button green small radius"><i class="fa fa-pencil-square-o"></i> Edit Bet</button>
-      <button class="remove_bet_button button red small radius"><i class="fa fa-ban"></i> Close Bet</button>
-    {{/ if}}
-    {{# if pendingStatus }}
-      <button class="complete_bet_button button expand radius">Complete</button>
-    {{/ if}}
 
+      {{# if showCounterButton }}
+
+        <button class="counter_bet_button button green small radius"><i class="fa fa-pencil-square-o"></i> Counter Bet</button>
+
+      {{else}}
+
+        <button class="edit_button button green small radius"><i class="fa fa-pencil-square-o"></i> Edit Bet</button>
+
+      {{/ if }}
+
+    {{ / if }}
+
+        <button class="remove_bet_button button red small radius"><i class="fa fa-ban"></i> Close Bet</button>
+
+      {{# if pendingStatus }}
+        <button class="complete_bet_button button expand radius">Complete</button>
+      {{/ if }}
 
     {{# if showEditForm }}
       {{> editBetForm }}

@@ -1,3 +1,7 @@
+Template.singleBet.rendered = function() {
+  Session.set("user", Meteor.user().username)
+}
+
 Template.singleBet.helpers({
   openStatus: function(){
     return ( this.status === "open" );
@@ -29,14 +33,18 @@ Template.singleBet.helpers({
     }
   },
 
-    showCounterBetForm: function(){
-      if ( Session.get("counterbet")) {
-        return true
-      } else {
-        Session.set("counterbet")
-        return false
-      }
-    },
+  showCounterButton: function(){
+    return (Session.get("user") === this.bettors[1])
+  },
+
+  showCounterBetForm: function(){
+    if ( Session.get("counterbet")) {
+      return true
+    } else {
+      Session.set("counterbet")
+      return false
+    }
+  },
 });
 
 Template.singleBet.events({
