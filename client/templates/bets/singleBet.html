@@ -1,10 +1,5 @@
 <template name="singleBet">
   <div class="singlebet small-12 columns">
-    <div class="bet-image">
-      {{# with FS.GetFile 'images' image_id}}
-        <img src="{{ this.url store='images' }}">
-      {{/ with}}
-    </div>
     {{# if openStatus }}
       <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
     {{/ if }}
@@ -14,6 +9,11 @@
     {{# if completedStatus }}
       <div class="status-bar open"><h4 class="text-center">Status: {{ status }}</h4></div>
     {{/ if }}
+    <div class="bet-image">
+      {{# with FS.GetFile 'images' image_id}}
+        <img src="{{ this.url store='images' }}">
+      {{/ with}}
+    </div>
     <div class="bet-content">
       <div class="bet-bg">
         <div class="title-bar"><h4>The Bet</h4></div>
