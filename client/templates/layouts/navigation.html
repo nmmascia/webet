@@ -26,6 +26,7 @@
         <li><label>{{ currentUser.username }}</label></li>
         <li><a href="{{ pathFor 'dashboard' }}">My Profile</a></li>
         <li><a href="{{ pathFor 'friendsList' }}">Friends List</a></li>
+        <li><a class="logout-link">Logout</a></li>
       {{ else }}
         <li><label>Welcome</label></li>
         <li><a href="#">Sign up</a></li>

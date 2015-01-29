@@ -193,7 +193,7 @@ body, h1, h2, h3, h4, h5, li, p {
 .logo-text {
   font-size: 3.5em;
   font-family: 'Lobster', cursive;
-  color: #C6DFF2;
+  color: #333;
 }
 
 .long {
@@ -274,6 +274,7 @@ body, h1, h2, h3, h4, h5, li, p {
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 0.1em 0.5em;
+  border-radius: 3px;
 }
 
 .status-bar h4 {
@@ -381,10 +382,6 @@ body, h1, h2, h3, h4, h5, li, p {
 .bet-info-grid {
 }
 
-.welcome {
-  margin-top: 35%;
-}
-
 .notification-count {
   text-align: center;
   vertical-align: center;
@@ -450,4 +447,36 @@ body, h1, h2, h3, h4, h5, li, p {
 
 .white {
   color: #fff;
+}
+
+.login-link-text {
+  display: none;
+}
+
+.login-close-text {
+  display: none;
+}
+
+.login-button.login-button-form-submit {
+  margin-bottom: 0.3em;
+  border-radius: 3px;
+  background-color: #1691BA;
+  border-color: #1691BA;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.8125rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.9375rem;
+}
+
+.additional-link-container {
+  margin-bottom: 0.3em;
+}
+
+.or {
+  display: none;
+}
+
+.configure-text-facebook {
+  display: none;
 }
