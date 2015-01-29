@@ -1,15 +1,19 @@
 <template name="friendsList">
 
-  <form class="search_friends">
-    <input type="text" name="find_friend" placeholder="Search for friends" class="search_bar">
-    <button type="submit" class="find-btn button radius small">Find Friends</button>
-  </form>
+  <div class="small-12 columns">
+    <form class="search_friends">
+      <input type="text" name="find_friend" placeholder="Search for friends" class="search_bar">
+      <button type="submit" class="button radius small">Find Friends</button>
+    </form>
 
-  <div class="friends-bar">
-    <h4>{{currentUser.username}}'s Friends</h4>
+    <div class="friends-content">
+      <div class="friends-bar">
+        <h4>{{currentUser.username}}'s Friends</h4>
+      </div>
+      {{#each friends }}
+        <span class="friend"><i class="fa fa-user"></i> {{ friend }} - <a href="/bet" class="challenge_button">Challenge</a><br></span>
+      {{/ each }}
+    </div>
   </div>
-  {{#each friends }}
-    <span class="friend"><i class="fa fa-user"></i> {{ friend }} - <a href="/bet" class="challenge_button">Challenge</a><br></span>
-  {{/ each }}
 
 </template>
