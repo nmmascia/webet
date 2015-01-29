@@ -359,6 +359,8 @@ body, h1, h2, h3, h4, h5, li, p {
   font-size: 2em;
   color: #333;
   overflow: hidden;
+  margin-left: 5px;
+  letter-spacing: .75px;
 }
 
 .stats {
@@ -506,11 +508,14 @@ body, h1, h2, h3, h4, h5, li, p {
 }
 
 .configure-text-facebook {
-  display: none;
+  display: 'Oswald', sans-serif;
 }
 
 .friends-content {
   background-color: #DBD9D9;
   border-radius: 3px;
   padding-bottom: 0.5em;
+}
+.username-container {
+  margin: 0 auto;
 }
