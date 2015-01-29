@@ -88,6 +88,7 @@ Template.singleBet.events({
     bet.wager = event.target.betWager.value;
     bet.user = Meteor.user();
     bet.defender = Meteor.users.findOne({ username: event.target.defender.value });
+    bet.image_id = this.image_id;
 
     Meteor.call( 'editBet', bet );
     Session.set( 'edit', !Session.get('edit') );
@@ -102,9 +103,12 @@ Template.singleBet.events({
     bet.wager = event.target.betWager.value;
     bet.user = Meteor.user();
     bet.defender = Meteor.users.findOne({ username: event.target.defender.value });
+    console.log(bet.defender)
+    bet.image_id = this.image_id;
+    bet.type = "counter"
 
     Meteor.call( 'editBet', bet );
-    Meteor.call("createBetNotification", bet.user.username, bet.defender, "counter" )
+    Meteor.call('createBetNotification', bet.user.username, bet.defender.username, bet.type, bet._id )
     Session.set( 'counterbet', !Session.get('counterbet') );
   }
 });
