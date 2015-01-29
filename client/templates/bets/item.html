@@ -4,35 +4,37 @@
       <div class="open-bet bet-list-content">
         <a href="{{pathFor 'singleBet'}}"><h4 class="bet-title"><i class="fa fa-circle-o-notch"></i> {{ title }}</h4><p><i class="fa fa-users"></i> {{ bettors.[0] }} <span class="versus-font">vs</span> {{ bettors.[1] }}</p></a>
         <button class="accept_button button radius small"><i class="fa fa-check-square-o"></i> Bring it on!</button>
+
+      {{# if showCounterButton }}
+          <button class="counter_bet_button button green small radius"><i class="fa fa-pencil-square-o"></i> Counter Bet</button>
+      {{/ if }}
         <button class="close_bet_button button radius red small"><i class="fa fa-ban"></i> Close</button>
       </div>
     {{/ if }}
+
     {{# if pendingStatus }}
       <div class="pending-bet bet-list-content">
         <a href="{{pathFor 'singleBet'}}"><h4 class="bet-title"><i class="fa fa-clock-o"></i> {{ title }}</h4><p><i class="fa fa-users"></i> {{ bettors.[0] }} <span class="versus-font">vs</span> {{ bettors.[1] }}</p></a>
+
         <button class="complete_bet_button button radius small">Complete</button>
       </div>
     {{/ if }}
+
     {{# if completedStatus }}
       {{# if displayWinner }}
         <div class="won-bet bet-list-content">
           <a href="{{pathFor 'singleBet'}}"><h4><span class="bet-title"><i class="fa fa-trophy crazy-yellow"></i> YOU WON:</span> {{ title }}</h4></a>
+
           <button class="paid_bet_button button radius success small"><i class="fa fa-check-circle"></i> Paid</button>
         </div>
       {{else}}
         <div class="lost-bet bet-list-content">
           <a href="{{pathFor 'singleBet'}}"><h4><span class="bet-title">YOU LOST:</span> {{ title }}</h4></a>
+
           <button class="paid_bet_button button radius success small"><i class="fa fa-check-circle"></i> Paid</button>
         </div>
       {{/if}}
     {{/ if }}
 
-    {{# if showEditForm }}
-      {{> editBetForm }}
-    {{/ if }}
-
-    {{# if showCompleteBetForm }}
-      {{> completeBetForm }}
-    {{/ if }}
   </div>
 </template>

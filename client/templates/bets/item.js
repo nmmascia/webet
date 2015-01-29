@@ -18,7 +18,12 @@ Template.betItem.helpers({
       Session.set("complete?", false);
       return false;
     }
+
   },
+
+  showCounterButton: function(){
+   return (Session.get("user") === this.bettors[1])
+ },
 
   displayWinner: function(){
     return (this.winner === Session.get("user"))
@@ -38,10 +43,20 @@ Template.betItem.events({
   'click .accept_button' : function(){
      Meteor.call("updateStatus", this._id, "pending");
      Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "accepted bet", this._id);
+     var route = "/bets/" + this._id
+     Router.go(route)
+  },
+
+  'click .counter_bet_button' : function(){
+    Session.set("counterbet", true)
+    var route = "/bets/" + this._id
+    Router.go(route)
   },
 
   'click .complete_bet_button' : function(){
     Session.set( "complete?", !Session.get("complete?")) ;
+    var route = "/bets/" + this._id;
+    Router.go(route);
   },
 
   'submit .select-winner' : function(event){
@@ -53,5 +68,6 @@ Template.betItem.events({
     Meteor.call("createPoints", 0, this._id);
     Meteor.call("incrementPoints",  this._id, 5);
     Meteor.call("createBetNotification", this.bettors[0], this.bettors[1], "completed bet", this._id);
+
   }
 });
