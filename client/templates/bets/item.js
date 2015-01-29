@@ -22,8 +22,8 @@ Template.betItem.helpers({
   },
 
   showCounterButton: function(){
-    (Session.get("user") === this.bettors[1])
-  },
+   return (Session.get("user") === this.bettors[1])
+ },
 
   displayWinner: function(){
     return (this.winner === Session.get("user"))
