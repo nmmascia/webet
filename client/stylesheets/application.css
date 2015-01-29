@@ -326,6 +326,18 @@ body, h1, h2, h3, h4, h5, li, p {
   font-weight: 400;
 }
 
+.friends-bar {
+  background-color: #808080;
+  padding-left: 0.5em;
+}
+
+.friends-bar h4 {
+  color: #fff;
+  font-family: 'Copse', serif;
+  font-weight: 400;
+}
+
+
 .teal {
   color: #74DBF4;
 }
