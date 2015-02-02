@@ -1,11 +1,6 @@
-# we.bet
+# WeBet
 
-DBC Final -- Nick Mascia, Clifton Thomas, Frank DelPidio, Kevin Kwon
-https://trello.com/b/T5vS74CZ/ideation-phase
-
-# We.Bet
-
-We.Bet is an app that allows users to share a social experience that revolves around prop bets.
+WeBet is an app that allows users to share a social experience that revolves around prop bets.
 
 # Mission Statement
 
