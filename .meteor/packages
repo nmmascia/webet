@@ -14,5 +14,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:filesystem
 cfs:ui
-autopublish
 accounts-ui-unstyled
